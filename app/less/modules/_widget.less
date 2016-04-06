@@ -1,0 +1,250 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Style Framework
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/06/04
+ * ===================
+ * - Box
+ * - Components
+ *   ~ Billboard
+ *   ~ Calendar
+ *   ~ Todo
+ *   ~ Shortcuts
+ */
+
+
+/**
+ * Box
+ */
+
+.widgets {
+  position: relative;
+}
+
+.widget {
+  position: absolute;
+}
+
+.widget-content {
+  &:extend(.panel all);
+  margin: 0 (@widget-gap / 2) @widget-gap;
+  overflow: hidden;
+
+  @media screen and (max-width: @mq-pad-height) {
+    box-shadow: @widget-shadow-narrow;
+  }
+}
+
+// ----- Box end ----- //
+
+
+/**
+ * Billboard
+ */
+
+.w-billboard {
+  position: relative;
+}
+
+.w-billboard-heading {
+  background-color: #000;
+  background-color: @w-billboard-heading-bg;
+  position: absolute;
+    left: @w-billboard-heading-gap-h;
+    top: 50%;
+
+  > h2,
+  > h3 {
+    color: @w-billboard-heading-color;
+  }
+
+  > h2 {
+    font-size: @w-billboard-heading-size;
+    padding: @gap-v-sm @w-billboard-header-gap-h;
+  }
+
+  > h3 {
+    background-color: @w-billboard-sub-bg;
+    font-size: @w-billboard-sub-size;
+    margin: 0;
+    padding: @gap-h-tiny @w-billboard-header-gap-h;
+  }
+}
+
+.w-billboard-illus {
+  vertical-align: top;
+  width: 100%;
+}
+
+// ----- Billboard end ----- //
+
+
+/**
+ * Calendar
+ */
+
+.w-calendar {
+  text-align: center;
+}
+
+.w-calendar-heading {
+  background-color: @w-calendar-heading-bg;
+
+  > button {
+    font-size: @w-calendar-heading-size;
+    height: @w-calendar-heading-height;
+    text-shadow: @text-shadow;
+  }
+
+  > .last {
+    float: left;
+    width: (100% / 7);
+  }
+
+  > .next {
+    float: right;
+    width: (100% / 7);
+  }
+}
+
+.w-calendar-week-title {
+  background-color: @color-secondary-darker;
+  color: @w-calendar-week-color;
+  line-height: @w-calendar-week-height;
+
+  > ul {
+    &:extend(.clearfix all);
+
+    > li {
+      float: left;
+      width: (100% / 7);
+    }
+  }
+}
+
+.w-calendar-dates {
+
+  > ul {
+    &:extend(.clearfix all);
+
+    > li {
+      border-top: 1px solid @w-calendar-date-border-color;
+      float: left;
+      height: @w-calendar-date-height;
+      line-height: @w-calendar-date-height;
+      position: relative;
+      width: (100% / 7);
+
+      &.active {
+        background-color: @w-calendar-date-active-bg;
+      }
+    }
+  }
+}
+
+.w-calendar-opr {
+  line-height: 1;
+  position: absolute;
+    left: 0;
+    right: 0;
+    top: (@w-calendar-date-height / 2 + @line-base / 2);
+  text-align: center;
+
+  > a {
+    background-color: @w-calendar-opr-bg;
+    border-radius: 50%;
+    .inline-block();
+    height: @w-calendar-opr-size;
+    width: @w-calendar-opr-size;
+  }
+}
+
+.w-calendar-footer {
+  background-color: @w-calendar-footer-bg;
+  height: @w-calendar-footer-height;
+}
+
+// ----- Calendar end ----- //
+
+
+/**
+ * Todo
+ */
+
+.w-todo-list {
+  padding: 0 @gap-h;
+}
+
+.w-todo {
+  border-top: 1px solid @w-todo-sep-color;
+  padding: @w-todo-gap (@w-todo-gap / 2);
+  position: relative;
+
+  &:first-child {
+    border: 0;
+  }
+}
+
+.w-todo-opr {
+  position: absolute;
+    right: (@w-todo-gap / 2);
+    top: @w-todo-gap;
+
+  button {
+    width: 100%;
+  }
+}
+
+.w-todo-tag {
+  background-color: @w-todo-tag-bg;
+  border-radius: @w-todo-tag-border-radius;
+  color: @w-todo-tag-color;
+  .inline-block();
+  margin-right: @gap-h-sm;
+  padding: @w-todo-tag-padding;
+  width: @w-todo-tag-width;
+}
+
+.w-todo-person {
+  font-weight: 700;
+  margin-right: @gap-h-sm;
+}
+
+// ----- Todo end ----- //
+
+
+/**
+ * Shortcuts
+ */
+
+.w-shortcuts {
+  padding: @gap-v 0;
+  text-align: center;
+}
+
+html .w-shortcut {
+  border-left: 1px solid @w-shortcut-sep-color;
+  color: @w-shortcut-color;
+  .inline-block();
+  padding: @gap-h-tiny @gap-h;
+
+  &:first-child {
+    border: 0;
+  }
+}
+
+.w-shortcut-icon {
+  display: block;
+  height: @w-shortcut-icon-size;
+  margin: 0 auto;
+  text-align: center;
+  width: @w-shortcut-icon-size;
+}
+
+.w-shortcut-name {
+  display: block;
+}
+
+// ----- Shortcuts end ----- //

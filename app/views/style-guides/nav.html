@@ -1,0 +1,466 @@
+<h2>导航</h2>
+
+<h3>Tab（上下）</h3>
+
+<div class="holder">
+  <h4>显示效果</h4>
+
+  <div class="tab tab-h" id="tab-1">
+    <div class="tab-header">
+      <ul>
+        <li data-tab-page="1" class="active"><a href="javascript:void(0);">Export current</a></li>
+        <li data-tab-page="2"><a href="javascript:void(0);">Optional export</a></li>
+        <li data-tab-page="3"><a href="javascript:void(0);">Export all</a></li>
+      </ul>
+    </div>
+
+    <div class="tab-content">
+      <ul>
+        <li data-tab-page="1" class="active">
+          <div class="tab-page">
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+          </div>
+        </li>
+        <li data-tab-page="2">
+          <div class="tab-page">
+            <p>我再导！</p>
+          </div>
+        </li>
+        <li data-tab-page="3">
+          <div class="tab-page">
+            <p>我还导！</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;div class="tab tab-h">
+  &lt;div class="tab-header">
+    &lt;ul>
+      &lt;li class="active">&lt;a href="javascript:void(0);">Export current&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="javascript:void(0);">Optional export&lt;/a>&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+
+  &lt;div class="tab-content">
+    &lt;ul>
+      &lt;li class="active">
+        &lt;div class="tab-page">...&lt;/div>
+      &lt;/li>
+      &lt;li>
+        &lt;div class="tab-page">...&lt;/div>
+      &lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div></code></pre>
+
+  <h4>注意事项：</h4>
+
+  <ul class="list-unordered">
+    <li>上下 Tab：<code>.tab-h</code>。</li>
+    <li><code>.tab-header</code> 和 <code>.tab-content</code> 内的 <code>li</code> 元素为一对一关系。</li>
+    <li>为 Tab 绑定事件，需执行代码：
+<pre><code>new Tab({
+  $tab: $('#tab-1'),
+  minHeight: 400
+});</code></pre></li>
+    <li><code>.tab-content</code> 的最小高度可另行设置。</li>
+  </ul>
+</div>
+
+<h3>Tab（左右）</h3>
+
+<div class="holder">
+  <h4>显示效果</h4>
+
+  <div class="tab tab-v" id="tab-2">
+    <div class="tab-header">
+      <ul>
+        <li data-tab-page="1" class="active"><a href="javascript:void(0);">Export current</a></li>
+        <li data-tab-page="2"><a href="javascript:void(0);">Optional export</a></li>
+        <li data-tab-page="3"><a href="javascript:void(0);">Export all</a></li>
+      </ul>
+    </div>
+
+    <div class="tab-content">
+      <ul>
+        <li data-tab-page="1" class="active">
+          <div class="tab-page">
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+            <p>我导！</p>
+          </div>
+        </li>
+        <li data-tab-page="2">
+          <div class="tab-page">
+            <p>我再导！</p>
+          </div>
+        </li>
+        <li data-tab-page="3">
+          <div class="tab-page">
+            <p>我还导！</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;div class="tab tab-v">
+  &lt;div class="tab-header">
+    &lt;ul>
+      &lt;li class="active">&lt;a href="javascript:void(0);">Export current&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="javascript:void(0);">Optional export&lt;/a>&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+
+  &lt;div class="tab-content">
+    &lt;ul>
+      &lt;li class="active">
+        &lt;div class="tab-page">...&lt;/div>
+      &lt;/li>
+      &lt;li>
+        &lt;div class="tab-page">...&lt;/div>
+      &lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div></code></pre>
+
+  <h4>注意事项：</h4>
+
+  <ul class="list-unordered">
+    <li>左右 Tab：<code>.tab-v</code>。</li>
+    <li>结构和上下 Tab 完全一致，只改动 <code>.tab-v</code>。</li>
+  </ul>
+</div>
+
+<h3>项目列表</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <div class="item-list">
+    <ul>
+      <li>Company</li>
+      <li>Name</li>
+      <li>Date</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <pre><code>&lt;div class="item-list">
+  &lt;ul>
+    &lt;li>Company&lt;/li>
+    &lt;li>Name&lt;/li>
+    &lt;li>Date&lt;/li>
+  &lt;/ul>
+&lt;/div></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li>最基本的列表样式，仅用于呈现内容。</li>
+    <li>需额外操作，再叠加其它样式。</li>
+  </ul>
+</div>
+
+<h3>下拉列表</h3>
+
+<div class="holder opened">
+  <h4>显示效果：</h4>
+
+  <div class="dropdown-list gap-v" style="display: block; position: static;">
+    <ul>
+      <li><a href="javascript:void(0);">10</a></li>
+      <li><a href="javascript:void(0);">20</a></li>
+      <li><a href="javascript:void(0);">30</a></li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;div class="dropdown-list">
+  &lt;ul>
+    &lt;li>&lt;a href="javascript:void(0);">10&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="javascript:void(0);">20&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="javascript:void(0);">30&lt;/a>&lt;/li>
+  &lt;/ul>
+&lt;/div></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li><code>.dropdown-list</code> 必须包含在 <code>.dropdown</code> 内部使用，一般用来代替 <code>select</code>。</li>
+    <li>通过为 <code>.dropdown</code> 切换 <code>.opened</code> 样式来控制 <code>.dropdown-list</code> 是否显示。</li>
+    <li>详见 <a href="#controls">Control 页面</a>。</li>
+  </ul>
+</div>
+
+<h3>筛选列表</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <div class="picker">
+    <div class="picker-header">
+      <form class="form-search form-search-sm">
+        <input type="text" value="精妙的小搜搜">
+        <button class="btn-icon btn-link"><span class="icon"></span></button>
+      </form>
+    </div>
+
+    <div class="picker-list">
+      <ul>
+        <li>
+          <label class="check"><input type="checkbox" checked> <span>选择项 1</span></label>
+        </li>
+        <li>
+          <label class="check"><input type="checkbox" checked> <span>选择项 2</span></label>
+        </li>
+        <li>
+          <label class="check"><input type="checkbox" checked> <span>选择项 3</span></label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;div class="picker">
+  &lt;div class="picker-header">
+    &lt;form class="form-search form-search-sm">
+      &lt;input type="text" value="精妙的小搜搜">
+      &lt;button class="btn-icon btn-link">&lt;span class="icon">&lt;/span>&lt;/button>
+    &lt;/form>
+  &lt;/div>
+
+  &lt;div class="picker-list">
+    &lt;ul>
+      &lt;li>
+        &lt;label class="check">&lt;input type="checkbox" checked> &lt;span>选择项 1&lt;/span>&lt;/label>
+      &lt;/li>
+      &lt;li>
+        &lt;label class="check">&lt;input type="checkbox" checked> &lt;span>选择项 2&lt;/span>&lt;/label>
+      &lt;/li>
+      &lt;li>
+        &lt;label class="check">&lt;input type="checkbox" checked> &lt;span>选择项 3&lt;/span>&lt;/label>
+      &lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li>使用时请为父元素设置宽度。</li>
+  </ul>
+</div>
+
+<h3>分页</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <div class="pagination">
+    <span class="page-data">1-20/999</span>
+
+    <form class="page-show-items">
+      <div class="dropdown">
+        <div class="dropdown-face">
+          <span class="dropdown-text">10</span>
+          <button type="button" class="btn-icon btn-link">◆</button>
+        </div>
+
+        <div class="dropdown-list">
+          <ul>
+            <li><a href="javascript:void(0);">10</a></li>
+            <li><a href="javascript:void(0);">20</a></li>
+            <li><a href="javascript:void(0);">30</a></li>
+          </ul>
+        </div>
+
+        <input type="text">
+      </div>
+    </form>
+
+    <ol class="page-numbers">
+      <li><a href="javascript:void(0);">1</a></li>
+      <li><a href="javascript:void(0);">…</a></li>
+      <li class="active"><a href="javascript:void(0);">7</a></li>
+      <li><a href="javascript:void(0);">8</a></li>
+      <li><a href="javascript:void(0);">9</a></li>
+      <li><a href="javascript:void(0);">10</a></li>
+      <li><a href="javascript:void(0);">11</a></li>
+      <li><a href="javascript:void(0);">…</a></li>
+      <li><a href="javascript:void(0);">999</a></li>
+    </ol>
+
+    <form class="page-jumper">
+      <span>第</span>
+      <input type="text" value="1">
+      <span>页</span>
+    </form>
+  </div>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;div class="pagination">
+  &lt;span class="page-data">1-20/99999&lt;/span>
+
+  &lt;form class="page-show-items">
+    &lt;select>
+      &lt;option value="10">10&lt;/option>
+      &lt;option value="20">20&lt;/option>
+      &lt;option value="30">30&lt;/option>
+    &lt;/select>
+  &lt;/form>
+
+  &lt;ol class="page-numbers">
+    &lt;li>&lt;a href="javascript:void(0);">1&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="javascript:void(0);">…&lt;/a>&lt;/li>
+    &lt;li class="active">&lt;a href="javascript:void(0);">7&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="javascript:void(0);">8&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="javascript:void(0);">9&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="javascript:void(0);">10&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="javascript:void(0);">11&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="javascript:void(0);">…&lt;/a>&lt;/li>
+    &lt;li>&lt;a href="javascript:void(0);">999&lt;/a>&lt;/li>
+  &lt;/ol>
+
+  &lt;form class="page-jumper">
+    &lt;span>第&lt;/span>
+    &lt;input type="text" value="1">
+    &lt;span>页&lt;/span>
+  &lt;/form>
+&lt;/div></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li><code>.page-show-items</code> 修改数据表每页显示的条目数。</li>
+    <li><code>.page-numbers</code> 包含：首页、尾页、5 个当前页、前 5 页、后 5 页。</li>
+    <li><code>.page-jumper</code> 可以直接跳页，输入后回车操作。</li>
+    <li><code>.page-data</code> 表示当前显示的是第几条，一共查询到几条。</li>
+  </ul>
+</div>
+
+<h3>树状导航</h3>
+<div class="holder">
+   <h4>显示效果：</h4>
+      <div class="tree-side-nav">
+            <div class="item-list">
+                <div class="trigger triggered">JS Components
+                    <span class="tree-right-icon"> </span>
+                </div>
+                    <ul>
+                        <li data-tab-page="1" class="active"><a href="javascript:void(0);">Export current</a>
+                            <ul>
+                                <li><a href="javascript:void(0);">Linkage</a></li>
+                                <li><a href="javascript:void(0);">Flowchart Maker</a></li>
+                            </ul>
+                        </li>
+                        <li data-tab-page="2"><a href="javascript:void(0);">Optional export</a></li>
+                        <li data-tab-page="3"><a href="javascript:void(0);">Export all</a></li>
+                    </ul>
+            </div>
+            <div class="item-list">
+                <div class="trigger">CSS Guideline
+                    <span class="tree-right-icon"> </span>
+                </div>
+                    <ul>
+                        <li data-tab-page="1" class="active"><a href="javascript:void(0);">Export current</a></li>
+                        <li data-tab-page="2"><a href="javascript:void(0);">Optional export</a></li>
+                        <li data-tab-page="3"><a href="javascript:void(0);">Export all</a></li>
+                    </ul>
+            </div>
+        </div>
+            <hr>
+
+            <h4>代码：</h4>
+
+          <pre><code>&lt;div class="pagination">
+              &lt;span class="page-data">1-20/99999&lt;/span>
+
+              &lt;form class="page-show-items">
+              &lt;select>
+              &lt;option value="10">10&lt;/option>
+              &lt;option value="20">20&lt;/option>
+              &lt;option value="30">30&lt;/option>
+              &lt;/select>
+              &lt;/form>
+
+              &lt;ol class="page-numbers">
+              &lt;li>&lt;a href="javascript:void(0);">1&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="javascript:void(0);">…&lt;/a>&lt;/li>
+              &lt;li class="active">&lt;a href="javascript:void(0);">7&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="javascript:void(0);">8&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="javascript:void(0);">9&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="javascript:void(0);">10&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="javascript:void(0);">11&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="javascript:void(0);">…&lt;/a>&lt;/li>
+              &lt;li>&lt;a href="javascript:void(0);">999&lt;/a>&lt;/li>
+              &lt;/ol>
+
+              &lt;form class="page-jumper">
+              &lt;span>第&lt;/span>
+              &lt;input type="text" value="1">
+              &lt;span>页&lt;/span>
+              &lt;/form>
+              &lt;/div></code></pre>
+
+            <h4>说明：</h4>
+
+            <ul class="list-unordered">
+                <li><code>.page-show-items</code> 修改数据表每页显示的条目数。</li>
+                <li><code>.page-numbers</code> 包含：首页、尾页、5 个当前页、前 5 页、后 5 页。</li>
+                <li><code>.page-jumper</code> 可以直接跳页，输入后回车操作。</li>
+                <li><code>.page-data</code> 表示当前显示的是第几条，一共查询到几条。</li>
+            </ul>
+        </div>
+
+<script>
+  new Tab({
+    $tab: $('#tab-1'),
+    minHeight: 300
+  });
+
+  new Tab({
+    $tab: $('#tab-2'),
+    minHeight: 300
+  });
+</script>

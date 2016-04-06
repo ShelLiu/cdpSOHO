@@ -1,0 +1,111 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Style Framework
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/07/04
+ */
+
+.sort {
+  &:extend(.clearfix all);
+  width: @sort-co-width + @sort-priority-width + @gap-h-lg;
+
+  .picker {
+    margin-top: @gap-v-sm;
+  }
+
+  .picker-list {
+    max-height: (@picker-gap-v * 2 + @line-base + 1) * 10 - 1;
+    overflow: auto;
+
+    li {
+      position: relative;
+    }
+  }
+
+  button {
+    margin-left: @gap-h-tiny;
+  }
+}
+
+.sort-header {
+  &:extend(.clearfix all);
+
+  h4 {
+    float: left;
+    font-size: @sort-title-size;
+    font-weight: 700;
+    line-height: @control-height;
+  }
+}
+
+.sort-opr {
+  float: right;
+}
+
+.sort-column-order,
+.sort-priority {
+  float: left;
+}
+
+.sort-column-order {
+  width: @sort-co-width;
+}
+
+.sort-priority {
+  margin-left: @gap-h-lg;
+  width: @sort-priority-width;
+
+  li {
+    &:extend(.clearfix all);
+  }
+}
+
+.sort-item-opr {
+  opacity: 0;
+  position: absolute;
+    right: @gap-h-tiny;
+    top: @gap-h-tiny;
+  .transition(opacity @duration-short @timing);
+
+  :hover > & {
+    opacity: 1;
+  }
+
+  .no-opacity & {
+    display: none;
+  }
+
+  .no-opacity :hover > & {
+    display: block;
+  }
+}
+
+.sort-name {
+  &:extend(.ellipsis);
+  background-color: @sort-name-bg;
+  border-right: 1px solid @picker-border-color;
+  float: left;
+  margin: -@picker-gap-v 0;
+  position: relative;
+  width: @sort-name-width;
+
+  > span {
+    line-height: @line-base + @picker-gap-v * 2;
+  }
+
+  .active > & {
+    background-color: @picker-active-bg;
+    border-color: @picker-active-bg;
+  }
+}
+
+.sort-a-z {
+  float: left;
+  width: (@sort-priority-width - @sort-name-width - @gap-h * 2 - 1);
+
+  > .check-inline:first-child {
+    margin-left: @gap-h-sm;
+  }
+}

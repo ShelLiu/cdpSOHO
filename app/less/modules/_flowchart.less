@@ -1,0 +1,91 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Style Framework
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/07/15
+ * ===================
+ * - Container
+ * - Element
+ * - Line
+ */
+
+
+/**
+ * Container
+ */
+
+.fchart {
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: auto;
+  padding: @gap-v @gap-h;
+}
+
+.fchart-box {
+  margin: 0 auto;
+  position: relative;
+}
+
+// ----- Container end ----- //
+
+
+/**
+ * Element
+ */
+
+.fchart-item {
+  .ellipsis();
+  background-color: @fchart-item-bg;
+  border-radius: @fchart-item-height / 2;
+  min-width: @fchart-item-width - 2;
+  padding: ((@fchart-item-height - @line-base) / 2) @gap-h-sm;
+  position: absolute;
+    z-index: 1;
+  text-align: center;
+
+  &:hover {
+    background-color: @fchart-item-hover-bg;
+    cursor: pointer;
+  }
+}
+
+// ----- Element end ----- //
+
+
+/**
+ * Line
+ */
+
+.fchart-line {
+  position: absolute;
+}
+
+.fchart-line-h {
+  border-top: 1px solid @fchart-item-border-color;
+}
+
+.fchart-line-v {
+  border-left: 1px solid @fchart-item-border-color;
+}
+
+.fchart-line-hv {
+  border-left: 1px solid @fchart-item-border-color;
+}
+
+
+// Arrow
+.fchart-arrow-down {
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 12px solid @fchart-arrow-color;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  position: absolute;
+    left: -4px;
+    top: 23px;
+  width: 0;
+}
+// ----- Line end ----- //

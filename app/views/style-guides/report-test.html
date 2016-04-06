@@ -1,0 +1,79 @@
+<div id="report-1" class="gap-v"></div>
+
+<hr>
+
+<h4>说明：</h4>
+
+<ul class="list-unordered">
+  <li>
+    请求一个 report 分为两步，都是 <code>JSON</code> 格式文件：
+    <ul class="list-unordered">
+      <li>请求设置</li>
+      <li>请求内容</li>
+    </ul>
+  </li>
+
+  <li>
+    设置（前台应该给所有值设置默认值）
+    <ul class="list-unordered">
+      <li><code>reportID {string}</code>：与页面上 <code>div</code> 的 <code>id</code> 同步。</li>
+      <li><code>reportName {string}</code>：标题。</li>
+      <li><code>selectable {boolean}</code>：是否显示多选框。</li>
+      <li><code>key {string}</code>：主键。</li>
+      <li><code>buttons</code>：操作按钮列表（待定）。</li>
+    </ul>
+  </li>
+
+  <li>
+    <code>header</code>：表头
+    <ul class="list-unordered">
+      <li><code>name {string}</code>：字段名称。</li>
+      <li><code>text {string}</code>：显示字符。</li>
+      <li><code>sortable {boolean}</code>：本列是否可以排序。</li>
+      <li><code>order {desc/asc}</code>：排序默认是升序或者降序。</li>
+      <li><code>editable {boolean}</code>：本列是否可以编辑。</li>
+      <li><code>validation {object}</code>：编辑时的验证规则。</li>
+      <li><code>type {string}</code>：在表格中显示的方式（<span class="highlight">需要详细的列表</span>）。</li>
+      <li><code>layout {string}</code>：打开表单编辑的方式（<span class="highlight">需要详细的列表</span>）。</li>
+    </ul>
+  </li>
+
+  <li>
+    <code>data</code>：数据
+    <ul class="list-unordered">
+      <li><code>totalCount {number}</code>：查询总条目（非当前显示条目）。</li>
+      <li><code>items {array}</code>：每条数据都是一组 key/value，可以有空值。</li>
+    </ul>
+  </li>
+
+  <li>
+    备注：
+    <ul class="list-unordered">
+      <li><code>date</code> 类型均以时间戳形式传输。</li>
+    </ul>
+  </li>
+</ul>
+
+<script>
+
+  $.when(
+    $.getJSON('../db/report-header.json')
+  ).then(function (header) {
+    var report;
+
+    // Step 1: Header
+    header.reportID = 'report-1';
+    report = new Report(header);
+
+    // Step 2: Content
+    $.getJSON('../db/report-data.json')
+      .done(function (data) {
+
+        report.model.set({
+          totalCount: data.totalCount,
+          items: data.items
+        });
+      });
+  });
+
+</script>

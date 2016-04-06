@@ -1,0 +1,50 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Style Framework
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/06/25
+ */
+
+
+.card {
+  &:extend(.clearfix all);
+  &:extend(.gap-v all);
+  background-color: mix(@card-bg-top, @card-bg-bottom);
+  .background-image(linear-gradient(@card-bg-top, @card-bg-bottom));
+  border: 1px solid @card-border-color;
+  border-radius: @border-radius-sm;
+  box-shadow: @card-shadow;
+  height: @card-ava-size;
+  max-width: 100%;
+  width: @card-min-width;
+}
+
+.card-avatar {
+  float: left;
+  height: @card-ava-size;
+  overflow: hidden;
+  width: @card-ava-size;
+}
+
+.card-info {
+  border-left: 1px solid @card-border-color;
+  margin-left: @card-ava-size;
+  padding: 0 @gap-h;
+}
+
+.card-name {
+  &:extend(.ellipsis);
+  font-size: @card-name-size;
+  font-weight: 700;
+  margin-top: @card-name-margin-top !important;
+}
+
+.card-info-list {
+
+  > li {
+    &:extend(.ellipsis);
+    margin-bottom: @card-info-gap;
+  }
+}

@@ -1,0 +1,235 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Style Framework
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/06/04
+ * ===================
+ * - Text
+ * - Link
+ * - Heading
+ * - List
+ * - Code
+ * - Label & Number
+ * - Highlight
+ */
+
+
+/**
+ * Text
+ */
+
+html {
+  color: @color-text;
+  font: @font-base/@line-base @font-family;
+  overflow-wrap: break-word;
+  word-wrap: break-word;      // legacy
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table,
+form,
+fieldset,
+blockquote,
+pre {
+  &:extend(.gap-v all);
+}
+
+p,
+ol,
+ul {
+  &:extend(.gap-v-sm all);
+}
+
+p {
+  text-align: justify;
+}
+
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 @gap-h-lg;
+}
+
+hr {
+  border-color: @color-hr;
+  border-style: solid;
+  border-width: 1px 0 0;
+  margin: @gap-v 0;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: @font-family-mono;
+}
+
+// ----- Text end ----- //
+
+
+/**
+ * Link
+ */
+
+a {
+  outline: 0;
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    color: @color-link;
+  }
+
+  &:hover {
+    color: @color-link-hover;
+  }
+
+  &:active {
+    color: @color-link-active;
+  }
+}
+
+// ----- Link end ----- //
+
+
+/**
+ * Heading
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  line-height: 1;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: @h1-size;
+}
+
+h2 {
+  font-size: @h2-size;
+}
+
+h3 {
+  font-size: @h3-size;
+}
+
+h4 {
+  font-size: @h4-size;
+}
+
+h5 {
+  font-size: @h5-size;
+}
+
+h6 {
+  font-size: @h6-size;
+}
+
+// ----- Heading end ----- //
+
+
+/**
+ * List
+ */
+
+ol,
+ul {
+  list-style-type: none;
+  padding: 0;
+
+  ol,
+  ul {
+    margin: @gap-v-sm 0 !important;
+  }
+}
+
+.list-ordered {
+  list-style-type: decimal;
+  padding-left: @gap-h-lg;
+}
+
+.list-unordered {
+  list-style-type: disc;
+  padding-left: @gap-h-lg;
+
+  .list-unordered {
+    list-style-type: circle;
+
+    .list-unordered {
+      list-style-type: square;
+    }
+  }
+}
+
+// ----- List end ----- //
+
+
+/**
+ * Code
+ */
+
+code {
+  background-color: @color-code-bg;
+  padding: 0 @gap-h-tiny;
+
+  pre > & {
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+// ----- Code end ----- //
+
+
+/**
+ * Label & Number
+ */
+
+.label,
+.number {
+  background-color: @label-bg;
+  border-radius: @border-radius-sm;
+  color: @label-color;
+  font-size: @font-sm;
+  .inline-block();
+  padding: (@font-base - @font-sm) @gap-h-tiny;
+}
+
+.number {
+  border: @number-border-width solid @number-border-color;
+  border-radius: (@line-base / 2);
+  box-shadow: @number-shadow;
+  font-weight: 700;
+  line-height: (@line-base - @number-border-width * 2);
+  min-width: (@line-base - @number-border-width * 2);
+  .opacity(@number-opacity);
+  padding: 0;
+  text-align: center;
+}
+
+// ----- Label & Number end ----- //
+
+
+/**
+ * Highlight
+ */
+
+.highlight {
+  background-color: @color-highlight-bg;
+  color: @color-highlight;
+}
+
+// ----- Highlight end ----- //

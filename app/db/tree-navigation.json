@@ -1,0 +1,116 @@
+{
+    "nodeList": [
+        {
+            "id":"010000",
+            "text": "控件集合",
+            "url":"",
+            "children": [
+                {
+                    "id":"010100",
+                    "text":"CDP JS 公用方法",
+                    "url":"/demo-pages/js-library.html"
+                },
+                {
+                    "id":"010200",
+                    "text":"表单测试",
+                    "url":"/demo-pages/form-demo.html"
+                },
+                {
+                    "id":"010300",
+                    "text":"报表测试",
+                    "url":"/demo-pages/report-demo.html"
+                },
+                {
+                    "id":"010400",
+                    "text":"请假测试",
+                    "url":"/demo-pages/leave-demo.html"
+                },
+                {
+                    "id":"010500",
+                    "text":"员工信息测试",
+                    "url":"/demo-pages/basic-info-demo.html"
+                },
+                {
+                    "id":"010600",
+                    "text":"联动测试",
+                    "url":"/demo-pages/linkage.html"
+                },
+                {
+                    "id":"010700",
+                    "text":"Ash Tree测试",
+                    "url":"/demo-pages/ash-tree.html"
+                },
+                {
+                    "id":"010800",
+                    "text":"流程配置",
+                    "url":"/demo-pages/flowchart-maker.html"
+                }
+            ]
+        },
+        {
+            "id": "020000",
+            "text": "样式集合",
+            "url":"",
+            "children":[
+                {
+                    "id":"020100",
+                    "text":"Typography",
+                    "url":"/style-guides/typography.html"
+                },
+                {
+                    "id":"020200",
+                    "text":"Controls",
+                    "url":"/style-guides/controls.html"
+                },
+                {
+                    "id":"020300",
+                    "text":"Form",
+                    "url":"/style-guides/form.html"
+                },
+                {
+                    "id":"020400",
+                    "text":"Navigation",
+                    "url":"/style-guides/nav.html"
+                },
+                {
+                    "id":"020500",
+                    "text":"Panel",
+                    "url":"/style-guides/panel.html"
+                },
+                {
+                    "id":"020600",
+                    "text":"Dialog",
+                    "url":"/style-guides/dialog.html"
+                },
+                {
+                    "id":"020700",
+                    "text":"Table",
+                    "url":"/style-guides/table.html"
+                },
+                {
+                    "id":"020800",
+                    "text":"Other",
+                    "url":"",
+                    "children":[
+                        {
+                            "id":"020801",
+                            "text":"Linkage",
+                            "url":"",
+                            "children":[
+                                {
+                                    "id":"02080101",
+                                    "text":"LinkageChildren",
+                                    "url":"/style-guides/datagrid.html"
+                                }
+                            ]
+                        },{
+                            "id":"020802",
+                            "text":"Process Configuration",
+                            "url":"/style-guides/name-card.html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

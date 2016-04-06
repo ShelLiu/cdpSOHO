@@ -1,0 +1,134 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Style Framework
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/06/04
+ * ===================
+ * - Normal Table
+ * - Long Table
+ * - Sort
+ * - Select
+ */
+
+
+/**
+ * Normal Table
+ */
+
+table {
+  &:extend(.vertical-rhythm all);
+  width: 100%;
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+tr {
+  border-bottom: 1px solid @table-border-color;
+
+  thead > & {
+    background-color: @table-head-bg;
+    border-top: 1px solid @table-border-color;
+    color: @table-head-color;
+  }
+
+  tbody > &:nth-child(even) {
+    background-color: @table-strip-bg;
+  }
+
+  tbody > &:hover,
+  tbody > &.selected {
+    background-color: @table-selected-bg;
+    color: @table-selected-color;
+  }
+}
+
+th,
+td {
+  min-width: @grid-header-min-width;
+  padding: @table-td-padding-top @table-td-padding-side;
+  text-align: left;
+  white-space: nowrap;
+
+  button {
+    margin-right: 0.25em;
+  }
+}
+
+th {
+  border-right: 1px solid @table-border-color;
+
+  &:last-child {
+    border: 0;
+  }
+}
+
+// ----- Normal Table end ----- //
+
+
+/**
+ * Long Table
+ */
+
+.table-holder {
+  &:extend(.gap-v all);
+  border-bottom: 1px solid @table-border-color;
+  min-height: @table-min-height;
+  overflow-x: auto;
+
+  > table {
+    min-width: 100%;
+  }
+}
+
+// ----- Long Table end ----- //
+
+
+/**
+ * Sort
+ */
+
+.sortable {
+  cursor: pointer;
+  padding-right: @gap-h * 1.5;
+  position: relative;
+
+  &:after {
+    color: @table-sort-arrow-mute;
+    content: '▼';
+    position: absolute;
+      right: @gap-h-sm;
+    font-size: @font-sm;
+  }
+
+  &.desc:after {
+    color: @table-sort-arrow;
+    content: '▼';
+  }
+
+  &.asc:after {
+    color: @table-sort-arrow;
+    content: '▲';
+  }
+}
+
+// ----- Sort end ----- //
+
+
+/**
+ * Select
+ */
+
+.selectable {
+  border: 0;
+  max-width: @check-size;
+  min-width: @check-size;
+  overflow: hidden;
+  width: @check-size;
+  white-space: nowrap;
+}
+
+// ----- Select end ----- //

@@ -1,0 +1,59 @@
+{
+  "chart": {
+    "type": "area"
+  },
+  "title": {
+    "text": "Average fruit consumption during one week"
+  },
+  "legend": {
+    "layout": "vertical",
+    "align": "left",
+    "verticalAlign": "top",
+    "x": 150,
+    "y": 100,
+    "floating": true,
+    "borderWidth": 1,
+    "backgroundColor": "#FFFFFF"
+  },
+  "xAxis": {
+    "categories": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ]
+  },
+  "yAxis": {
+    "title": {
+      "text": "Fruit units"
+    }
+  },
+  "tooltip": {
+    "shared": true,
+    "valueSuffix": " units"
+  },
+  "credits": {
+    "enabled": false
+  },
+  "plotOptions": {
+    "area": {
+      "fillOpacity": 0.5
+    }
+  },
+  "series": [{
+    "name": "Jane",
+    "data": [4, 5, 4, 5, 4, 5, 4]
+  }, {
+    "name": "Jane",
+    "data": [3, 4, 3, 4, 3, 4, 3]
+  }, {
+    "name": "Jane",
+    "data": [2, 3, 2, 3, 2, 3, 2]
+  }, {
+    "name": "John",
+    "data": [1, 2, 1, 2, 1, 2, 1]
+  }]
+}

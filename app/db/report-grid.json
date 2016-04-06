@@ -1,0 +1,21 @@
+{
+  "totalCount": 40,
+  "items": [
+    {
+      "deptId": "1",
+      "deptName": "PAC"
+    },
+    {
+      "deptId": "2",
+      "deptName": "PBC"
+    },
+    {
+      "deptId": "3",
+      "deptName": "PCC"
+    },
+    {
+      "deptId": "4",
+      "deptName": "PDC"
+    }
+  ]
+}

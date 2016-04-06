@@ -1,0 +1,25 @@
+{
+  "id": 1,
+  "name": "省市县",
+  "items": [
+    {
+      "itemID": "1",
+      "itemName": "省",
+      "url": "db/linkage/linkage-province.json",
+      "nextID": "2"
+    },
+    {
+      "itemID": "2",
+      "itemName": "市",
+      "url": "db/linkage/linkage-city.json",
+      "parentID": "1",
+      "nextID": "3"
+    },
+    {
+      "itemID": "3",
+      "itemName": "县",
+      "url": "db/linkage/linkage-country.json",
+      "parentID": "2"
+   }
+  ]
+}

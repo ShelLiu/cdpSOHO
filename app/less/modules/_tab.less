@@ -1,0 +1,174 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Style Framework
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/06/04
+ * ===================
+ * - Horizontal
+ *   ~ Header
+ *   ~ Content
+ * - Vertical
+ */
+
+.tab {
+  &:extend(.gap-v all);
+}
+
+.tab-content {
+  position: relative;
+}
+
+.tab-page {
+  overflow: auto;
+  position: absolute;
+    left: 0;
+    right: 0;
+    top: -1px;
+
+  .active > & {
+    z-index: @z-tab-page;
+  }
+}
+
+
+/**
+ * Horizontal
+ */
+
+.tab-h {
+
+  // Header
+
+  .tab-header {
+    &:extend(.clearfix all);
+    position: relative;
+      z-index: @z-tab-header;
+
+    > ul {
+      display: table;
+      width: 100%;
+
+      > li {
+        display: table-cell;
+        padding: 0 @gap-h-tiny;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+
+        > a {
+          background-color: @tab-header-bg;
+          border: 1px solid @tab-border-color;
+          border-bottom-color: @tab-active-border-color;
+          border-radius: @border-radius @border-radius 0 0;
+          color: @tab-header-color;
+          display: block;
+          padding: ((@tab-header-height - @line-base) / 2) @gap-h-sm;
+          text-align: center;
+        }
+
+        &.active {
+
+          > a {
+            background-color: @tab-active-bg;
+            border-color: @tab-active-border-color;
+            border-bottom-color: @tab-active-bg;
+          }
+        }
+      }
+    }
+  }
+
+  // Content
+
+  .tab-content {
+    max-height: @tab-max-height;
+    min-height: @tab-min-height;
+  }
+
+  .tab-page {
+    &:extend(.holder all);
+    background-color: @tab-content-bg;
+    border: 1px solid @tab-active-border-color;
+
+    .active > & {
+      z-index: @z-tab-page;
+    }
+  }
+}
+
+
+// ----- Horizontal end ----- //
+
+
+/**
+ * Vertical
+ */
+
+.tab-v {
+  overflow: hidden;
+
+  // Header
+
+  .tab-header {
+    background-color: @tab-v-header-bg;
+    float: left;
+    width: @tab-v-header-width;
+
+    li {
+      padding-bottom: @gap-h-tiny;
+    }
+
+    a {
+      color: @tab-v-header-color;
+      display: block;
+      font-size: @tab-v-header-font-size;
+      line-height: @tab-v-header-line-height;
+      padding: ((@tab-v-header-min-height - @tab-v-header-line-height) / 2) @gap-h ((@tab-v-header-min-height - @tab-v-header-line-height) / 2) @gap-h-lg;
+
+      &:hover {
+        background-color: @tab-v-header-active-bg;
+        color: @tab-v-header-active-color;
+      }
+    }
+
+    .active > a {
+      background-color: @tab-v-header-active-bg;
+      border-left: @tab-v-header-active-border-width solid @tab-v-header-active-border-color;
+      color: @tab-v-header-active-color;
+      padding-left: @gap-h-lg - @tab-v-header-active-border-width;
+      position: relative;
+
+      &:before {
+        border: @tab-v-header-active-border-width solid transparent;
+        border-left-color: @tab-v-header-active-color;
+        content: ' ';
+        display: block;
+        height: 0;
+        width: 0;
+        position: absolute;
+          left: @gap-h / 2 + @tab-v-header-active-border-width;
+          top: ((@tab-v-header-min-height - @tab-v-header-line-height) / 2) + @tab-v-header-line-height / 2 - @tab-v-header-active-border-width;
+      }
+    }
+  }
+
+  .tab-page {
+    background-color: @tab-content-bg;
+    padding: @gap-v-lg @gap-h-lg;
+  }
+
+  // Content
+
+  .tab-content {
+    margin-left: @tab-v-header-width;
+  }
+}
+
+// ----- Vertical end ----- //

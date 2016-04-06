@@ -1,0 +1,59 @@
+<div id="linkage-list" class="gap-v"></div>
+
+<script>
+
+  function editLinkageItem() {
+    var selected = this.getSelectedItems(),
+        item = selected && selected[0];
+
+    if (item) {
+
+      new Linkage({
+        $holder: $('#linkage-list'),
+        initDataURL: 'db/linkage/linkage-edit.json',
+        submitURL: '127.0.0.1',
+        linkage: item
+      });
+    }
+  }
+
+  var linkageListHeader = {
+        "reportID": "linkage-list",
+        "titleLocaleKey": "LINKAGE_LIST_TITLE",
+        "selectable": true,
+        "header": [
+          {
+            "name": "id",
+            "text": "编号",
+            "type": "int"
+          },
+          {
+            "name": "name",
+            "text": "名称",
+            "type": "string"
+          }
+        ],
+        customButtons: [
+          {
+            id: 'BTN_EDIT',
+            type: 'button',
+            icon: 'edit',
+            localeKey: 'BTN_EDIT',
+            onclick: editLinkageItem,
+            arguments: []
+          }
+        ]
+      },
+
+      linkageList = new Report({
+        headerJSON: linkageListHeader,
+        dataURL: 'db/linkage/linkage-list.json'
+      });
+
+  var returnFormat = {
+    parentTypeID: 1,        // 省
+    parentItemID: 21,       // 上海
+    childList: [2, 3, 4]    // 区县列表
+  };
+
+</script>

@@ -1,0 +1,77 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Style Framework
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/06/04
+ */
+
+
+.dropdown {
+  .inline-block();
+  position: relative;
+  vertical-align: top;
+
+  &.opened {
+    z-index: @z-dropdown-open;
+  }
+
+  input {
+    display: none;
+  }
+
+  button {
+    height: @control-height - 2;
+    vertical-align: top;
+  }
+}
+
+.dropdown-face {
+  &:extend(.clearfix all);
+  background-color: @dropdown-bg;
+  border: @dropdown-border-width solid @dropdown-border-color;
+  border-radius: @border-radius-sm;
+  cursor: pointer;
+  padding-left: ((@control-height - @font-base - @input-border-width) / 2);
+
+  .opened > & {
+    box-shadow: @dropdown-focus-shadow;
+  }
+
+  > button {
+    float: right;
+  }
+}
+
+.dropdown-text {
+  float: left;
+  line-height: @control-height - 2;
+}
+
+.dropdown-list {
+  &:extend(.list all);
+  &:extend(.slide-down all);
+  border: @dropdown-border-width solid @dropdown-border-color;
+  margin-top: -@dropdown-border-width;
+  max-height: @dropdown-max-height;
+  overflow: auto;
+  left: 0;
+  right: 0;
+
+  a {
+    background-color: @dropdown-bg;
+    border-top-width: 0;
+    height: @dropdown-height;
+    line-height: @dropdown-height;
+
+    &:hover {
+      background-color: @dropdown-hover-bg;
+      color: @dropdown-hover-color;
+    }
+  }
+
+//  li:first-child > a {
+//    border-top-width: @dropdown-border-width;
+//  }
+}

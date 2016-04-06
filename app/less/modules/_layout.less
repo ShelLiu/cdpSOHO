@@ -1,0 +1,310 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Style Framework
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/06/04
+ * ===================
+ * - Body
+ * - Container
+ * - Page Header
+ * - Page Content
+ * - Page Widget
+ * - Page Widget
+ * - Page Footer
+ */
+
+
+/**
+ * Body
+ */
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+// ----- Body end ----- //
+
+
+/**
+ * Container
+ */
+
+.container-full {
+  margin: 0 @container-full-margin-side;
+
+  @media screen and (max-width: @mq-screen-lg) {
+    margin: 0 @container-full-margin-side-narrow;
+  }
+}
+
+// ----- Container end ----- //
+
+
+/**
+ * Page Header
+ */
+
+.page-header {
+  background-color: @page-header-bg;
+  border-bottom: @page-header-border-width solid @page-header-border-color;
+  box-shadow: @page-header-shadow;
+  //  height: @page-header-height;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: @z-page-header;
+}
+
+.page-logo {
+  float: left;
+
+  > a {
+    display: block;
+    height: @page-header-height;
+    line-height: @page-header-height;
+
+    > img {
+      vertical-align: middle;
+    }
+  }
+
+  @media screen and (max-width: @mq-pad-height) {
+
+    img {
+      width: @page-logo-width-narrow;
+    }
+  }
+}
+
+.page-nav {
+  &:extend(.clearfix all);
+  margin: 0 auto;
+  text-align: center;
+
+  > li {
+    .inline-block();
+    vertical-align: top;
+
+    > a {
+      background-color: @page-nav-icon-bg;
+      color: @page-nav-icon-color;
+      display: block;
+      height: @page-header-height;
+      line-height: @page-header-height;
+      width: @page-nav-icon-width;
+      text-align: center;
+    }
+
+    &.active > a {
+      background-color: @page-nav-icon-active-bg;
+      border-bottom: @page-nav-icon-active-border-width solid @page-nav-icon-active-border-color;
+      color: @page-nav-icon-active-color;
+      height: (@page-header-height - @page-nav-icon-active-border-width + @page-header-border-width);
+    }
+
+    .icon {
+      .inline-block();
+      background-image: url(../images/icons/page-top.png);
+      background-repeat: no-repeat;
+      height: @page-nav-icon-span-size;
+      margin: 0 auto;
+      vertical-align: middle;
+      width: @page-nav-icon-span-size;
+    }
+  }
+
+  @media screen and (max-width: @mq-pad-height) {
+
+    > li {
+
+      > a {
+        height: @page-nav-icon-width-narrow !important;
+        margin-top: (@page-header-height - @page-nav-icon-width-narrow) / 2;
+        line-height: @page-nav-icon-width-narrow !important;
+        width: @page-nav-icon-width-narrow;
+      }
+    }
+  }
+}
+
+.page-nav-icon-widget {
+  background-position: 0 -@page-nav-icon-span-size;
+
+  .active & {
+    background-position: 0 0;
+  }
+}
+
+.page-nav-icon-menu {
+  background-position: -@page-nav-icon-span-size -@page-nav-icon-span-size;
+
+  .active & {
+    background-position: -@page-nav-icon-span-size 0;
+  }
+}
+
+.page-nav-icon-fav {
+  background-position: (-@page-nav-icon-span-size * 2) -@page-nav-icon-span-size;
+
+  .active & {
+    background-position: (-@page-nav-icon-span-size * 2) 0;
+  }
+}
+
+.page-search {
+  float: left;
+  margin-right: @page-search-margin-right;
+  margin-top: ((@page-header-height - @page-search-height) / 2) !important;
+
+  > input {
+    border-radius: (@page-search-height + @input-border-width) / 2;
+    height: @page-search-height + @input-border-width;
+    padding-left: (@page-search-height - @font-base - @input-border-width) / 2 + @gap-h-tiny;
+    padding-right: @page-search-height;
+    width: @page-search-width;
+
+    .lt-ie9 & {
+      line-height: @page-search-height;
+    }
+  }
+
+  > button {
+    height: @page-search-height;
+    width: @page-search-height;
+  }
+
+  @media screen and (max-width: @mq-screen-lg) {
+    margin: 0 @page-search-margin-right-narrow;
+
+    > input {
+      width: @page-search-width-narrow;
+    }
+  }
+
+  @media screen and (max-width: @mq-pad-width) {
+    display: none;
+  }
+}
+
+.page-user {
+  float: left;
+  margin-right: @page-avatar-margin-right;
+  margin-top: ((@page-header-height - @page-avatar-size) / 2);
+}
+
+.page-avatar {
+
+  > img {
+    height: @page-avatar-size;
+    width: @page-avatar-size;
+  }
+}
+
+.page-message {
+  float: left;
+  height: @page-message-height;
+  margin-top: ((@page-header-height - @page-message-height) / 2);
+  position: relative;
+
+  .icon {
+    background: url(../images/icons/page-top.png) (-@page-nav-icon-span-size * 3) 0 no-repeat;
+    .inline-block();
+    height: @page-message-icon-height;
+    width: @page-message-icon-width;
+  }
+
+  .number {
+    position: absolute;
+    right: -@line-base / 2;
+    top: -@line-base / 2;
+  }
+}
+
+// ----- Page Header end ----- //
+
+
+/**
+ * Page Content
+ */
+
+.page-content {
+  background: url(../images/bg.jpg) center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: @page-header-height;
+
+  > .container-full {
+    padding: 0 @gap-h;
+    position: absolute;
+    bottom: 0;
+    left: -@gap-h;
+    right: -@gap-h;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+// ----- Page Content end ----- //
+
+
+/**
+ * Page Widget
+ */
+
+.page-widgets-header {
+  padding: @page-widgets-header-gap-v 0;
+
+  > h1 {
+    float: left;
+    line-height: @btn-lg-height;
+    margin-right: @gap-h-lg;
+    white-space: nowrap;
+  }
+}
+
+.page-widgets-add-btn {
+  float: right;
+  text-transform: uppercase;
+
+  > .icon {
+    background: url(../images/icons/buttons.png) 0 -@page-widgets-add-size no-repeat;
+    height: @page-widgets-add-size;
+    .inline-block();
+    vertical-align: middle;
+    width: @page-widgets-add-size;
+  }
+}
+
+.page-widgets-box {
+  padding: 0 @widget-box-padding-side;
+  position: absolute;
+  bottom: 0;
+  left: -@widget-gap / 2 + @gap-h;
+  right: -@widget-gap / 2 + @gap-h;
+  top: @page-widgets-header-height;
+}
+
+// ----- Page Widget end ----- //
+
+
+/**
+ * Page Footer
+ */
+
+.page-footer {
+  &:extend(.holder);
+
+  > p {
+    text-align: center;
+  }
+}
+
+// ----- Page Footer end ----- //

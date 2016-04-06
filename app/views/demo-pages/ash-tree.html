@@ -1,0 +1,78 @@
+<div class="panel">
+  <div class="header">
+    <h4>Ash tree (Flow Chart)</h4>
+  </div>
+
+  <div class="content">
+    <div class="fchart" id="ash-tree"></div>
+  </div>
+</div>
+
+<script>
+
+var treeData = [
+  {
+    id: 'A10101',
+    name: 'A10101',
+    text: 'A10101-贵妃'
+  },
+  {
+    id: 'A10102',
+    name: 'A10102',
+    text: 'A10102-贤妃'
+  },
+  {
+    id: 'A10103',
+    name: 'A10103',
+    text: 'A10103-德妃'
+  },
+  {
+    id: 'A10104',
+    name: 'A10104',
+    text: 'A101s04-淑妃'
+  },
+  {
+    id: 'A1',
+    name: 'A1',
+    text: 'A1-Ash'
+  },
+  {
+    id: 'A101',
+    name: 'A101',
+    text: 'A101-皇后'
+  },
+  {
+    id: 'A10104',
+    name: 'A10104',
+    text: 'A10104-皇贵妃'
+  },
+  {
+    id: 'A1010101',
+    name: 'A1010101',
+    text: 'A1010101-太监'
+  },
+  {
+    id: 'A101010102',
+    name: 'A101010102',
+    text: 'A101010102-维克多'
+  }
+];
+
+new FChart({
+  nodeList: treeData,
+  holder: 'ash-tree',
+
+  onclick: function (id) {
+
+    if (id !== this.get('tree').root.id) {
+
+      new FChartMaker({
+        id: id,
+        getDataUrl: 'db/fchart/get-fchart.json',
+        sendDataUrl: '127.0.0.1'
+      });
+    }
+  }
+});
+
+</script>

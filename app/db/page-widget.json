@@ -1,0 +1,18 @@
+[
+  {
+    "src": "views/widgets/widget-1.html"
+  },
+  {
+    "src": "views/widgets/widget-2.html"
+  },
+  {
+    "name": "monthlyHeadcount",
+    "src": "views/widgets/widget-3.html"
+  },
+  {
+    "src": "views/widgets/widget-4.html"
+  },
+  {
+    "src": "views/widgets/widget-5.html"
+  }
+]

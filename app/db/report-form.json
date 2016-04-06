@@ -1,0 +1,196 @@
+{
+  "url": "127.0.0.1",
+  "className": "",
+  "cols": 1,
+  "buttons": [
+    "confirm",
+    "cancel"
+  ],
+  "fields": [
+    {
+      "controls": [
+        {
+          "name": "id",
+          "text": "编号",
+          "localeKey": "FIELD_ID",
+          "sortable": false,
+          "editable": false,
+          "type": "int",
+          "hidden": true,
+          "layout": "hidden"
+        },
+        {
+          "name": "empNameZH",
+          "text": "姓名",
+          "localeKey": "FIELD_NAME_CN",
+          "sortable": true,
+          "order": "desc",
+          "editable": true,
+          "type": "string",
+          "layout": "input",
+          "validation": {
+            "required": true,
+            "minlength": 2,
+            "maxlength": 50
+          }
+        },
+        {
+          "name": "empNameEN",
+          "text": "英文名",
+          "localeKey": "FIELD_NAME_EN",
+          "sortable": true,
+          "type": "string",
+          "layout": "input",
+          "validation": {
+            "required": true,
+            "minlength": 3,
+            "maxlength": 100
+          }
+        },
+        {
+          "name": "gender",
+          "text": "性别",
+          "localeKey": "FIELD_GENDER",
+          "sortable": true,
+          "editable": true,
+          "type": "string",
+          "layout": "select",
+          "validation": {
+            "required": true
+          },
+          "list": [
+            {
+              "value": "1",
+              "localeKey": "GENDER_MALE"
+            },
+            {
+              "value": "2",
+              "localeKey": "GENDER_FEMALE"
+            }
+          ],
+          "dataURL": "db/form/select.json"
+        },
+        {
+          "name": "dob",
+          "text": "出生日期",
+          "localeKey": "FIELD_DOB",
+          "sortable": true,
+          "editable": true,
+          "type": "date",
+          "format": "YYYY/MM/DD",
+          "layout": "date",
+          "validation": {
+            "required": true,
+            "min": -2209017600,
+            "max": "today"
+          }
+        },
+        {
+          "name": "position",
+          "text": "职位",
+          "localeKey": "FIELD_POSITION",
+          "sortable": true,
+          "editable": true,
+          "type": "string",
+          "layout": "input",
+          "validation": {
+            "required": true,
+            "maxlength": 100
+          }
+        },
+        {
+          "name": "dead",
+          "text": "死掉了",
+          "localeKey": "FORM_DEAD",
+          "sortable": true,
+          "editable": true,
+          "filterable": false,
+          "type": "string",
+          "layout": "checkList",
+          "checks": [
+            {
+              "name": "dead",
+              "className": "check-inline",
+              "layout": "radio",
+              "value": true,
+              "localeKey": "YES"
+            },
+            {
+              "name": "dead",
+              "className": "check-inline",
+              "layout": "radio",
+              "value": false,
+              "localeKey": "NO"
+            }
+          ],
+          "validation": {
+            "required": true
+          }
+        },
+        {
+          "name": "deptId",
+          "text": "部门",
+          "localeKey": "FIELD_DEPT",
+          "sortable": true,
+          "editable": true,
+          "type": "int",
+          "hidden": true,
+          "layout": "gridSelect",
+          "validation": {
+            "required": true,
+            "maxlength": 100
+          },
+          "gridParam": {
+            "dataURL": "db/report-grid.json",
+            "key": "deptId",
+            "text": "deptName",
+            "searchable": true,
+            "header": [
+              {
+                "name": "deptId",
+                "text": "部门 ID",
+                "localeKey": "FIELD_DEPT",
+                "sortable": true,
+                "editable": true,
+                "type": "int",
+                "layout": "input"
+              },
+              {
+                "name": "deptName",
+                "text": "部门",
+                "localeKey": "FIELD_DEPT",
+                "sortable": true,
+                "editable": true,
+                "type": "string",
+                "layout": "input"
+              }
+            ]
+          }
+        },
+        {
+          "name": "deptName",
+          "text": "部门",
+          "localeKey": "FIELD_DEPT",
+          "sortable": true,
+          "editable": true,
+          "type": "string",
+          "layout": "hidden"
+        },
+        {
+          "name": "attach",
+          "text": "",
+          "localeKey": "",
+          "sortable": false,
+          "editable": true,
+          "type": "string",
+          "layout": "file",
+          "accept": "image/*",
+          "validation": {
+            "required": true
+          }
+        }
+      ]
+    }
+  ]
+}
+

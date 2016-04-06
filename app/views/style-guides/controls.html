@@ -1,0 +1,728 @@
+<h2>控件</h2>
+
+<h3>附件</h3>
+
+<div class="holder">
+  <h4>显示效果（上传前）：</h4>
+
+  <div class="form-attach gap-v">
+    <span class="icon"></span>
+
+    <div class="form-attach-before">
+      <a href="javascript:void(0);" class="form-attach-command" data-locale="UPLOAD_ATTACHMENT">上传附件</a>
+    </div>
+
+    <div class="form-attach-after">
+      <a href="javascript:void(0);" class="form-attach-command">请假-病危通知书.png</a>
+      <a href="javascript:void(0);" class="icon-remove"></a>
+    </div>
+
+    <input type="file">
+  </div>
+
+  <h4>显示效果（上传后）：</h4>
+
+  <div class="form-attach gap-v after">
+    <span class="icon"></span>
+
+    <div class="form-attach-before">
+      <a href="javascript:void(0);" class="form-attach-command" data-locale="UPLOAD_ATTACHMENT">上传附件</a>
+    </div>
+
+    <div class="form-attach-after">
+      <a href="javascript:void(0);" class="form-attach-command">请假-病危通知书.png</a>
+      <a href="javascript:void(0);" class="icon-remove"></a>
+    </div>
+
+    <input type="file">
+  </div>
+</div>
+
+<h3>按钮</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <p class="gap-v">
+    <button type="button">普通的按钮</button>
+    <button type="button" class="btn-primary">牛逼的按钮</button>
+    <button type="button" class="btn-secondary">内涵的按钮</button>
+    <button type="button" class="btn-gray">低调的按钮</button>
+    <button type="button" class="btn-light-gray">忧郁的按钮</button>
+    <button type="button" class="btn-white">宛若新生的按钮</button>
+    <button type="button" class="btn-link">白白的按钮</button>
+    <button type="button" class="btn-link btn-link-primary">不太白的按钮</button>
+  </p>
+
+  <p>
+    <button type="button" disabled>普通的禁用</button>
+    <button type="button" class="btn-primary" disabled>牛逼的禁用</button>
+    <button type="button" class="btn-secondary" disabled>内涵的禁用</button>
+    <button type="button" class="btn-gray" disabled>低调的禁用</button>
+    <button type="button" class="btn-light-gray" disabled>忧郁的禁用</button>
+    <button type="button" class="btn-white" disabled>宛若新生的禁用</button>
+    <button type="button" class="btn-link" disabled>白白的禁用</button>
+    <button type="button" class="btn-link btn-link-primary" disabled>不太白的禁用</button>
+  </p>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;button type="button">普通的按钮&lt;/button>
+&lt;button type="button" class="btn-primary">牛逼的按钮&lt;/button>
+&lt;button type="button" class="btn-secondary">内涵的按钮&lt;/button>
+&lt;button type="button" class="btn-gray">低调的按钮&lt;/button>
+&lt;button type="button" class="btn-light-gray">忧郁的按钮&lt;/button>
+&lt;button type="button" class="btn-white">宛若新生的按钮&lt;/button>
+&lt;button type="button" class="btn-link">白白的按钮&lt;/button>
+&lt;button type="button" class="btn-link btn-link-primary">不太白的按钮&lt;/button></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li>按钮统一使用 <code>button</code> 标签，禁用 <code>&lt;input type=button></code> 和不符规范的 <code>a</code>，避免不同浏览器的渲染差异。</li>
+    <li>普通型：<code>button</code>。</li>
+    <li>高亮型：<code>button.btn-primary</code>。</li>
+    <li>链接型：<code>button.btn-link</code>。</li>
+    <li>链接高亮型：<code>button.btn-link-primary</code>。</li>
+    <li>禁用方式：<code>&lt;button disabled></code>，不要写 <code>disabled=true</code>、<code>disabled=disabled</code>，避免混乱。</li>
+  </ul>
+</div>
+
+<h3>精妙的按钮</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <p class="gap-v">
+    普通的精妙：
+    <button type="button" class="btn-sm">普通的精妙</button>
+    <button type="button" class="btn-sm" disabled>普通的精妙</button>
+  </p>
+
+  <p>
+    牛逼的精妙：
+    <button type="button" class="btn-sm btn-primary">牛逼的精妙</button>
+    <button type="button" class="btn-sm btn-primary" disabled>牛逼的精妙</button>
+  </p>
+
+  <p>
+    内涵的精妙：
+    <button type="button" class="btn-sm btn-secondary">内涵的精妙</button>
+    <button type="button" class="btn-sm btn-secondary" disabled>内涵的精妙</button>
+  </p>
+
+  <p>
+    低调的精妙：
+    <button type="button" class="btn-sm btn-gray">低调的精妙</button>
+    <button type="button" class="btn-sm btn-gray" disabled>低调的精妙</button>
+  </p>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;button type="button" class="btn-sm">普通的精妙&lt;/button></code></pre>
+</div>
+
+<h3>肥胖的按钮</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <p class="gap-v">
+    普通的肥胖：
+    <button type="button" class="btn-lg">普通的肥胖</button>
+    <button type="button" class="btn-lg" disabled>普通的肥胖</button>
+  </p>
+
+  <p>
+    牛逼的肥胖：
+    <button type="button" class="btn-lg btn-primary">牛逼的肥胖</button>
+    <button type="button" class="btn-lg btn-primary" disabled>牛逼的肥胖</button>
+  </p>
+
+  <p>
+    内涵的肥胖：
+    <button type="button" class="btn-lg btn-secondary">内涵的肥胖</button>
+    <button type="button" class="btn-lg btn-secondary" disabled>内涵的肥胖</button>
+  </p>
+
+  <p>
+    低调的肥胖：
+    <button type="button" class="btn-lg btn-gray">低调的肥胖</button>
+    <button type="button" class="btn-lg btn-gray" disabled>低调的肥胖</button>
+  </p>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;button type="button" class="btn-lg">普通的肥胖&lt;/button></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li><code>.btn-lg</code> 不适用于图标和链接样式。</li>
+  </ul>
+</div>
+
+<h3>可爱的按钮</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <p class="gap-v">
+    普通的可爱：
+    <button type="button" class="btn-cute">普通的可爱</button>
+    <button type="button" class="btn-cute" disabled>普通的可爱</button>
+  </p>
+
+  <p>
+    牛逼的可爱：
+    <button type="button" class="btn-cute btn-primary">牛逼的可爱</button>
+    <button type="button" class="btn-cute btn-primary" disabled>牛逼的可爱</button>
+  </p>
+
+  <p>
+    内涵的可爱：
+    <button type="button" class="btn-cute btn-secondary">内涵的可爱</button>
+    <button type="button" class="btn-cute btn-secondary" disabled>内涵的可爱</button>
+  </p>
+
+  <p>
+    低调的可爱：
+    <button type="button" class="btn-cute btn-gray">低调的可爱</button>
+    <button type="button" class="btn-cute btn-gray" disabled>低调的可爱</button>
+  </p>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;button type="button" class="btn-cute">普通的可爱&lt;/button></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li><code>.btn-cute</code> 为按钮添加圆角效果。</li>
+  </ul>
+</div>
+
+<h3>图标按钮</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <p class="gap-v">
+    普通的图标：
+    <button type="button" class="btn-icon">◆</button>
+    <button type="button" class="btn-icon">◆</button>
+  </p>
+
+  <p>
+    牛逼的图标：
+    <button type="button" class="btn-icon btn-primary">◆</button>
+    <button type="button" class="btn-icon btn-primary">◆</button>
+  </p>
+
+  <p>
+    内涵的图标：
+    <button type="button" class="btn-icon btn-secondary">◆</button>
+    <button type="button" class="btn-icon btn-secondary">◆</button>
+  </p>
+
+  <p>
+    低调的图标：
+    <button type="button" class="btn-icon btn-gray">◆</button>
+    <button type="button" class="btn-icon btn-gray">◆</button>
+  </p>
+
+  <p>
+    白白的图标：
+    <button type="button" class="btn-icon btn-link">◆</button>
+    <button type="button" class="btn-icon btn-link">◆</button>
+  </p>
+
+  <p>
+    不太白的图标：
+    <button type="button" class="btn-icon btn-link btn-link-primary">◆</button>
+    <button type="button" class="btn-icon btn-link btn-link-primary">◆</button>
+  </p>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;button type="button" class="btn-icon">◆&lt;/button></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li><code>.btn-icon</code> 可以和其他按钮样式叠加使用。</li>
+  </ul>
+</div>
+
+<h3>按钮组</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <div class="btn-group gap-v">
+    <button type="button">按钮 1</button>
+    <button type="button">按钮 2</button>
+    <button type="button">按钮 3</button>
+    <button type="button" class="btn-icon">◆</button>
+  </div>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;div class="btn-group">
+  &lt;button type="button">按钮 1&lt;/button>
+  &lt;button type="button">按钮 2&lt;/button>
+&lt;/div></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li><code>.btn-group</code> 的显示属性是 <code>display: inline-block</code>。</li>
+  </ul>
+</div>
+
+<h3>多个按钮组</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <div class="btn-bar">
+    <div class="btn-group">
+      <button type="button">剪切</button>
+      <button type="button">复制</button>
+      <button type="button">粘贴</button>
+    </div>
+
+    <div class="btn-group">
+      <button type="button">左对齐</button>
+      <button type="button">居中对齐</button>
+      <button type="button">右对齐</button>
+      <button type="button">分散对齐</button>
+    </div>
+  </div>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;div class="btn-bar">
+  &lt;div class="btn-group"> ... &lt;/div>
+  &lt;div class="btn-group"> ... &lt;/div>
+&lt/div></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li><code>.btn-bar</code> 即按钮栏，默认占据一整行。</li>
+  </ul>
+</div>
+
+<h3>隐藏按钮</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <div class="btn-group gap-v">
+    <button type="button">剪切</button>
+    <button type="button">复制</button>
+
+    <div class="btn-overflow">
+      <button type="button" class="btn-icon btn-trigger">┇</button>
+
+      <div class="btn-stack">
+        <button type="button">粘贴</button>
+        <button type="button">粘贴为纯文本</button>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;div class="btn-group">
+  &lt;button type="button">剪切&lt;/button>
+  &lt;button type="button">复制&lt;/button>
+
+  &lt;div class="btn-overflow">
+    &lt;button type="button" class="btn-icon btn-trigger">┇&lt;/button>
+
+    &lt;div class="btn-stack">
+      &lt;button type="button">粘贴&lt;/button>
+      &lt;button type="button">粘贴为纯文本&lt;/button>
+    &lt;/div>
+  &lt;/div>
+&lt;/div></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li>在收起状态下，点击 <code>.btn-trigger</code>，展开 <code>.btn-stack</code>。</li>
+    <li>在展开状态下，点击 <code>.btn-trigger</code>，<code>.btn-stack</code> 上的按钮，和页面其他部位都能收起 <code>.btn-stack</code>。</li>
+    <li><code>.btn-stack</code> 展开/收起方式和其他下拉列表通用。</li>
+  </ul>
+</div>
+
+<h3>文本框</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <p class="gap-v">
+    <input type="text" value="文字示例">
+    <input type="text" disabled value="被禁用的文字示例">
+  </p>
+
+  <p class="has-error">
+    <input type="text" value="写错了的文字示例">
+    <input type="text" disabled value="写错了还不能改的文字示例">
+  </p>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;input type="text">
+&lt;input type="text" disabled>
+&lt;div class="has-error">
+  &lt;input type="text">
+&lt;/div></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li>表示填写错误的样式 <code>.has-error</code> 要写在父元素上。</li>
+  </ul>
+</div>
+
+<h3>多行文本框</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <p class="gap-v">
+    <textarea>1
+2
+3
+4
+5</textarea>
+  </p>
+
+  <p class="has-error">
+    <textarea></textarea>
+  </p>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;textarea>&lt;/textarea>
+&lt;div class="has-error">
+  &lt;textarea>&lt;/textarea>
+&lt;/div></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li>表示填写错误的样式 <code>.has-error</code> 要写在父元素上。</li>
+    <li><code>textarea</code> 默认正好显示 5 行字。</li>
+  </ul>
+</div>
+
+<h3><code>checkbox</code></h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <div class="gap-v">
+    <label class="check"><input type="checkbox" checked><span> 选择项 1</span></label>
+    <label class="check"><input type="checkbox"><span> 选择项 2</span></label>
+    <label class="check"><input type="checkbox" disabled><span> 禁用</span></label>
+  </div>
+
+  <div class="gap-v-sm">
+    <label class="check"><input type="radio" name="c" checked><span> 选择项 1</span></label>
+    <label class="check"><input type="radio" name="c"><span> 选择项 2</span></label>
+    <label class="check"><input type="radio" name="c" disabled><span> 禁用</span></label>
+  </div>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;label class="check">&lt;input type="checkbox" checked> &lt;span>选择项 1&lt;/span>&lt;/label>
+&lt;label class="check">&lt;input type="checkbox" disabled> &lt;span>禁用&lt;/span>&lt;/label>
+&lt;label class="check">&lt;input type="radio" checked> &lt;span>选择项 1&lt;/span>&lt;/label>
+&lt;label class="check">&lt;input type="radio" disabled> &lt;span>禁用&lt;/span></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li>选择项每条都用 <code>label.check</code> 打包，文字部分用 <code>span</code> 打包，否则无法显示出样式。</li>
+    <li><code>span</code> 开头有一个空格。</li>
+    <li><code>checked</code> 属性不要写成 <code>checked=true</code> 或 <code>checked=checked</code>。</li>
+  </ul>
+</div>
+
+<h3>日期选择</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <div class="gap-v">
+    日期：<input type="text" class="datepicker">
+  </div>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;input type="text" class="datepicker"></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li>需要引入配套的 <code>Datepicker</code> 组件包，并执行 <code>new Datepicker()</code>。</li>
+  </ul>
+</div>
+
+<h3>日期 + 时间</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <div class="form-date form-date-start gap-v">
+    <span class="form-date-label">Start Time</span>
+
+    <input type="text" required>
+
+    <div class="dropdown form-date-hour">
+      <div class="dropdown-face">
+        <span class="dropdown-text">10</span>
+        <button type="button" class="btn-icon btn-link">▼</button>
+      </div>
+
+      <div class="dropdown-list">
+        <ul>
+          <li><a href="javascript:void(0);">1</a></li>
+          <li><a href="javascript:void(0);">2</a></li>
+          <li><a href="javascript:void(0);">3</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <span class="form-date-column">:</span>
+
+    <div class="dropdown form-date-minute">
+      <div class="dropdown-face">
+        <span class="dropdown-text">30</span>
+        <button type="button" class="btn-icon btn-link">▼</button>
+      </div>
+
+      <div class="dropdown-list">
+        <ul>
+          <li><a href="javascript:void(0);">1</a></li>
+          <li><a href="javascript:void(0);">2</a></li>
+          <li><a href="javascript:void(0);">3</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="gap-v">
+    <div class="form-date form-date-start">
+      <span class="form-date-label">Start Time</span>
+
+      <input type="text" required>
+
+      <div class="dropdown form-date-hour">
+        <div class="dropdown-face">
+          <span class="dropdown-text">10</span>
+          <button type="button" class="btn-icon btn-link">▼</button>
+        </div>
+
+        <div class="dropdown-list">
+          <ul>
+            <li><a href="javascript:void(0);">1</a></li>
+            <li><a href="javascript:void(0);">2</a></li>
+            <li><a href="javascript:void(0);">3</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <span class="form-date-column">:</span>
+
+      <div class="dropdown form-date-minute">
+        <div class="dropdown-face">
+          <span class="dropdown-text">30</span>
+          <button type="button" class="btn-icon btn-link">▼</button>
+        </div>
+
+        <div class="dropdown-list">
+          <ul>
+            <li><a href="javascript:void(0);">1</a></li>
+            <li><a href="javascript:void(0);">2</a></li>
+            <li><a href="javascript:void(0);">3</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-date form-date-end">
+      <span class="form-date-label">End Time</span>
+
+      <input type="text" required>
+
+      <div class="dropdown form-date-hour">
+        <div class="dropdown-face">
+          <span class="dropdown-text">10</span>
+          <button type="button" class="btn-icon btn-link">▼</button>
+        </div>
+
+        <div class="dropdown-list">
+          <ul>
+            <li><a href="javascript:void(0);">1</a></li>
+            <li><a href="javascript:void(0);">2</a></li>
+            <li><a href="javascript:void(0);">3</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <span class="form-date-column">:</span>
+
+      <div class="dropdown form-date-minute">
+        <div class="dropdown-face">
+          <span class="dropdown-text">30</span>
+          <button type="button" class="btn-icon btn-link">▼</button>
+        </div>
+
+        <div class="dropdown-list">
+          <ul>
+            <li><a href="javascript:void(0);">1</a></li>
+            <li><a href="javascript:void(0);">2</a></li>
+            <li><a href="javascript:void(0);">3</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;div class="form-date form-date-start">
+  &lt;span class="form-date-label">Start Time&lt;/span>
+
+  &lt;input type="text" required>
+
+  &lt;div class="dropdown form-date-hour">...&lt;/div>
+  :
+  &lt;div class="dropdown form-date-minute">...&lt;/div></code></pre>
+
+</div>
+
+<h3>下拉列表</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <div class="dropdown gap-v">
+    <div class="dropdown-face">
+      <span class="dropdown-text">下拉列表</span>
+      <button type="button" class="btn-icon btn-link">▼</button>
+    </div>
+
+    <div class="dropdown-list">
+      <ul>
+        <li><a href="javascript:void(0);">列表项 1</a></li>
+        <li><a href="javascript:void(0);">列表项 2</a></li>
+        <li><a href="javascript:void(0);">列表项 3</a></li>
+      </ul>
+    </div>
+
+    <input type="text">
+  </div>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;div class="dropdown">
+  &lt;div class="dropdown-face">
+    &lt;span class="dropdown-text">下拉列表&lt;/span>
+    &lt;button type="button" class="btn-icon btn-link">◆&lt;/button>
+  &lt;/div>
+
+  &lt;div class="dropdown-list">
+    &lt;ul>
+      &lt;li>&lt;a href="javascript:void(0);">列表项 1&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="javascript:void(0);">列表项 2&lt;/a>&lt;/li>
+      &lt;li>&lt;a href="javascript:void(0);">列表项 3&lt;/a>&lt;/li>
+    &lt;/ul>
+  &lt;/div>
+&lt;/div></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li><code>.dropdown</code> 的显示属性是 <code>display: inline-block</code>。</li>
+    <li>点击 <code>.dropdown-face</code> 范围都可以打开下拉列表。</li>
+  </ul>
+</div>
+
+<h3>搜索</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <div class="gap-v">
+    <form class="form-search">
+      <input type="text">
+      <button class="btn-icon btn-link"><span class="icon"></span></button>
+    </form>
+  </div>
+
+  <div class="gap-v">
+    <form class="form-search form-search-sm">
+      <input type="text">
+      <button class="btn-icon btn-link"><span class="icon"></span></button>
+    </form>
+  </div>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;div class="form-zsearch gap-v">
+  &lt;input type="text">
+  &lt;button type="button" class="btn-icon">◆&lt;/button>
+&lt;/div>
+&lt;form class="form-search form-search-cute">
+  &lt;input type="text">
+  &lt;button class="btn-icon btn-link">◆&lt;/button>
+&lt;/form></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li><code>.form-search</code> 的显示属性是 <code>display: inline-block</code>。</li>
+  </ul>
+</div>
+
+<h3>开关</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <div class="switch gap-v">
+    <input type="checkbox" id="switch">
+    <label for="switch" class="switch-toggle"></label>
+    <div class="switch-plate"></div>
+  </div>
+</div>

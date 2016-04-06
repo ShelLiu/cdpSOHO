@@ -1,0 +1,96 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Style Framework
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/06/04
+ * ===================
+ * List
+ * Item List
+ * Picker
+ */
+
+
+.list {
+
+  a {
+    display: block;
+    padding-left: @gap-h-sm;
+    padding-right: @gap-h-sm;
+  }
+}
+
+
+/**
+ * Item List
+ */
+
+.item-list {
+  &:extend(.gap-v all);
+  border: 1px solid @item-list-border-color;
+
+  li {
+    background-color: @item-list-bg;
+    border-bottom: 1px solid @item-list-border-color;
+    padding: ((@item-list-min-height - @line-base) / 2) @gap-h;
+
+    &:hover {
+      background-color: @item-list-hover-bg;
+    }
+  }
+}
+
+// ----- Item List end ----- //
+
+
+/**
+ * Picker
+ */
+
+.picker {
+  &:extend(.gap-v all);
+  background-color: mix(@picker-bg-light, @picker-bg-dark);
+  .background-image(linear-gradient(@picker-bg-light, @picker-bg-dark));
+  border: 1px solid @picker-border-color;
+}
+
+.picker-header {
+  padding: @picker-gap-v @gap-h-sm @gap-h-tiny;
+
+  > .form-search {
+    width: 100%;
+
+    > input {
+      color: @picker-input-color;
+    }
+
+    > input:focus {
+      background-color: @picker-input-focus-bg;
+      color: @picker-input-focus-color;
+    }
+  }
+}
+
+.picker-list {
+
+  li {
+    border-top: 1px solid @picker-border-color;
+    padding: @picker-gap-v @gap-h-sm;
+
+    &:first-child {
+      border: 0;
+    }
+
+    &.active {
+      background-color: @picker-active-bg;
+      color: @picker-active-color;
+
+      span {
+        color: @picker-active-color !important;
+      }
+    }
+  }
+}
+
+// ----- Picker end ----- //

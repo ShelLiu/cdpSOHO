@@ -1,0 +1,158 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Style Framework
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/06/04
+ * ===================
+ * - Normal
+ * - Specials
+ * - Mask
+ * - Message
+ */
+
+
+/**
+ * Normal
+ */
+
+.dialog {
+  &:extend(.pop-up all);
+  &:extend(.panel all);
+
+  form,
+  fieldset {
+    padding: 0;
+  }
+
+  form {
+    margin-top: -@gap-v;
+  }
+
+  > .header {
+
+    button {
+      margin-top: @gap-h-tiny;
+      padding: 0;
+    }
+  }
+
+  > .content {
+    max-height: @dialog-content-max-height;
+    padding-bottom: 0 !important;
+    overflow: visible;
+
+    &:last-child {
+      padding-bottom: @gap-v !important;
+    }
+  }
+
+  &.confirm {
+    width: auto;
+
+    > .content {
+      font-size: @dialog-conform-font-size;
+      padding-top: @gap-v-sm * 3;
+      padding-bottom: @gap-v-sm !important;
+
+      > p {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.dialog-confirm {
+  padding: @gap-v @gap-h;
+  text-align: center;
+
+  > button {
+    margin: 0 @gap-h;
+  }
+}
+
+// ----- Normal ----- //
+
+
+/**
+ * Specials
+ */
+
+.dialog-alert {
+  border: 0;
+  margin: 0;
+
+  tr:hover {
+    background-color: transparent;
+  }
+
+  td {
+    border: 0;
+  }
+
+  .fa {
+    font-size: 4em;
+    line-height: 1;
+  }
+}
+
+.dialog-alert-icon {
+  text-align: center;
+  width: 30%;
+}
+
+.fa:before {
+
+  .dialog-warning > & {
+    content: '\f071'; // .fa-exclamation-triangle
+  }
+
+  .dialog-error > & {
+    content: '\f057'; // .fa-times-circle
+  }
+
+  .dialog-success > & {
+    content: '\f058'; // .fa-check-circle
+  }
+}
+
+// ----- Specials ----- //
+
+
+/**
+ * Mask
+ */
+
+.dialog-mask {
+  background-color: @dialog-mask-bg;
+  .opacity(0.5);
+  position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: @z-pop-up - 1;
+}
+
+// ----- Mask ----- //
+
+
+/**
+ * Message
+ */
+
+.message {
+  &:extend(.pop-up all);
+  background-color: @panel-bg;
+  border: @message-border;
+  border-radius: @border-radius;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  font-size: @message-font-size;
+  min-width: @message-min-width;
+  padding: @gap-v-lg @gap-h-lg;
+  text-align: center;
+  width: auto;
+}
+
+// ----- Message ----- //

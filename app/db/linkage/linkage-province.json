@@ -1,0 +1,17 @@
+{
+  "totalCount": 34,
+  "items": [
+    {
+      "id": "21",
+      "name": "shanghai",
+      "text": "上海",
+      "nextIDList": ["1", "2"]
+    },
+    {
+      "id": "22",
+      "name": "tianjin",
+      "text": "天津",
+      "nextIDList": ["21", "31", "41"]
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+<h2>对话框</h2>
+
+<h3>普通</h3>
+
+<div class="holder">
+  <p><button type="button" id="open-normal-dialog">打开对话框</button></p>
+
+  <div id="normal-dialog" class="dialog">
+    <div class="header">
+      <h4>普通对话框</h4>
+
+      <div class="opr">
+        <button type="button" class="btn-link" data-action="close">×</button>
+      </div>
+    </div>
+
+    <div class="content"><p>对话框内容</p></div>
+
+    <div class="dialog-confirm">
+      <button type="button" class="btn-secondary btn-cute dialog-ok">确认</button>
+      <button type="button" class="btn-gray btn-cute dialog-cancel">取消</button>
+    </div>
+  </div>
+</div>
+
+<h3>表单</h3>
+
+<div class="holder">
+  <p><button type="button" id="open-form-dialog">打开对话框</button></p>
+
+
+  <div id="form-dialog" class="dialog">
+    <div class="header">
+      <h4>表单对话框</h4>
+
+      <div class="opr">
+        <button type="button" class="btn-link" data-action="close">×</button>
+      </div>
+    </div>
+
+    <div class="content"><form><fieldset><div class="form-group"><div class="form-item-line"><label class="form-label">国家：</label><div class="form-control"><select required><option></option><option>中国</option><option>海外</option></select></div></div><div class="form-item-line"><label class="form-label">省份：</label><div class="form-control"><select required><option></option><option>上海</option><option>其他</option></select></div></div></div></fieldset></form></div>
+
+    <div class="dialog-confirm">
+      <button type="button" class="btn-secondary btn-cute dialog-ok">确认</button>
+      <button type="button" class="btn-gray btn-cute dialog-cancel">取消</button>
+    </div>
+  </div>
+</div>
+
+<h3>警告</h3>
+
+<div class="holder">
+  <p><button type="button" id="open-warning-dialog">打开对话框</button></p>
+
+  <div id="warning-dialog" class="dialog">
+    <div class="header">
+      <h4>警告对话框</h4>
+
+      <div class="opr">
+        <button type="button" class="btn-link" data-action="close">×</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <table class="dialog-alert">
+        <tr>
+          <td class="dialog-alert-icon dialog-warning"></td>
+          <td><p>警告对话框内容对话框内容话框内容对话框内容</p></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="dialog-confirm">
+      <button type="button" class="btn-secondary btn-cute dialog-ok">确认</button>
+      <button type="button" class="btn-gray btn-cute dialog-cancel">取消</button>
+    </div>
+  </div>
+</div>
+
+<h3>错误</h3>
+
+<div class="holder">
+  <p><button type="button" id="open-error-dialog">打开对话框</button></p>
+
+  <div id="error-dialog" class="dialog">
+    <div class="header">
+      <h4>错误对话框</h4>
+
+      <div class="opr">
+        <button type="button" class="btn-link" data-action="close">×</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <table class="dialog-alert">
+        <tr>
+          <td class="dialog-alert-icon dialog-error"></td>
+          <td><p>错误对话框内容对话框内容话框内容对话框内容</p></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="dialog-confirm">
+      <button type="button" class="btn-secondary btn-cute dialog-ok">确认</button>
+      <button type="button" class="btn-gray btn-cute dialog-cancel">取消</button>
+    </div>
+  </div>
+</div>
+
+<h3>正确</h3>
+
+<div class="holder">
+  <p><button type="button" id="open-success-dialog">打开对话框</button></p>
+
+  <div id="success-dialog" class="dialog">
+    <div class="header">
+      <h4>成功对话框</h4>
+
+      <div class="opr">
+        <button type="button" class="btn-link" data-action="close">×</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <table class="dialog-alert">
+        <tr>
+          <td class="dialog-alert-icon dialog-success"></td>
+          <td><p>成功对话框内容对话框内容话框内容对话框内容</p></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="dialog-confirm">
+      <button type="button" class="btn-secondary btn-cute dialog-ok">确认</button>
+      <button type="button" class="btn-gray btn-cute dialog-cancel">取消</button>
+    </div>
+  </div>
+</div>
+
+<h3>消息</h3>
+
+<div class="holder">
+  <p><button type="button" id="open-message">弹出消息</button></p>
+</div>
+
+<script>
+  $('#open-normal-dialog').on('click', function () {
+    CDP.dialog($('#normal-dialog'));
+  });
+
+  $('#open-form-dialog').on('click', function () {
+    CDP.dialog($('#form-dialog'));
+  });
+
+  $('#open-warning-dialog').on('click', function () {
+    CDP.dialog($('#warning-dialog'));
+  });
+
+  $('#open-error-dialog').on('click', function () {
+    CDP.dialog($('#error-dialog'));
+  });
+
+  $('#open-success-dialog').on('click', function () {
+    CDP.dialog($('#success-dialog'));
+  });
+
+  $('#open-message').on('click', function () {
+    CDP.message("弹个消息");
+  });
+</script>

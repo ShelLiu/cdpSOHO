@@ -1,0 +1,230 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Style Framework
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/06/04
+ */
+
+.date-picker {
+  background-color: @date-bg;
+  min-height: (@control-height * 7);
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+  a {
+    text-decoration: none;
+  }
+
+  &.day {
+
+    .date-picker-day-list {
+      display: block;
+    }
+
+    .date-picker-month-list,
+    .date-picker-year-list {
+      display: none;
+    }
+  }
+
+  &.month {
+
+    .date-picker-day-list,
+    .date-picker-year-list {
+      display: none;
+    }
+
+    .date-picker-month-list {
+      display: block;
+    }
+  }
+
+  &.year {
+
+    .date-picker-day-list,
+    .date-picker-month-list {
+      display: none;
+    }
+
+    .date-picker-year-list {
+      display: block;
+    }
+  }
+
+  &.hidden {
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+
+  &.opened {
+    opacity: 1;
+    z-index: @z-datepicker;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  .no-csstransitions & {
+    display: none;
+  }
+
+  .no-csstransitions &.opened {
+    display: block;
+  }
+}
+
+.date-picker-day-list,
+.date-picker-month-list,
+.date-picker-year-list {
+  background-color: @date-bg;
+  border: 1px solid @date-border;
+  position: absolute;
+  width: (@date-item-width * 7 + @input-padding-side * 2);
+}
+
+.date-picker-title {
+  border-bottom: 1px solid @date-title-border;
+  margin: 0 1em;
+  padding: (@gap-v / 2) 0;
+  text-align: center;
+
+  > button {
+    background-color: transparent;
+    box-shadow: none;
+    color: @color-secondary;
+
+    &:hover > .arrow-left {
+      border-right-color: @date-arrow-hover-color;
+    }
+
+    &:hover > .arrow-right {
+      border-left-color: @date-arrow-hover-color;
+    }
+  }
+}
+
+.form-date-last,
+.form-date-next {
+  padding: 0;
+  width: @date-item-width / 1.5;
+}
+
+.form-date-last,
+.form-month-last,
+.form-decade-last {
+  padding-bottom: 6px;
+  padding-top: 6px;
+  float: left;
+}
+
+.form-date-next,
+.form-month-next,
+.form-decade-next {
+  padding-bottom: 6px;
+  padding-top: 6px;
+  float: right;
+}
+
+.form-date-year-current,
+.form-date-month-current,
+.form-date-decade-current {
+  border-radius: 3px;
+  font-size: @font-lg;
+  margin: 0 0.5em;
+  padding-bottom: 6px;
+  padding-top: 6px;
+
+  &:hover {
+    background-color: @date-today-hover-bg;
+    color: @date-today-hover-color;
+  }
+
+  &:active {
+    background-color: @color-secondary;
+    color: #fff;
+  }
+}
+
+.date-picker-week-title,
+.date-picker-dates,
+.date-pick-months,
+.date-pick-years {
+
+  > ul {
+    &:extend(.clearfix all);
+
+    > li {
+      float: left;
+      height: @control-height;
+      line-height: @control-height;
+      text-align: center;
+      width: @date-item-width;
+
+      > a {
+        border-radius: 5px;
+        color: @color-text;
+        display: block;
+
+        &:hover {
+          background-color: @date-today-hover-bg;
+          color: @date-today-hover-color;
+        }
+      }
+
+      &.current {
+
+        > a {
+          background-color: @date-today-bg;
+          color: @date-today-color;
+        }
+      }
+
+      &.disabled {
+
+        > a {
+          background-color: @date-disabled-bg;
+          color: @date-disabled-color;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
+
+.date-picker-week-title {
+  color: @date-week-title-color;
+  font-weight: 700;
+  padding: 0.5em @input-padding-side 0;
+}
+
+.date-picker-dates {
+  padding: 0 @input-padding-side (@gap-v / 2);
+}
+
+.date-pick-months,
+.date-pick-years {
+  padding: 0 @input-padding-side @input-padding-side;
+
+  > ul {
+
+    > li {
+      padding: @input-padding-side 0;
+      width: 25%;
+    }
+  }
+}
+
+.date-picker-clear {
+  padding-bottom: @gap-v-sm;
+  text-align: center;
+
+  > button {
+    width: 100px;
+  }
+}

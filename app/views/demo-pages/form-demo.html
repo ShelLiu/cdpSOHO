@@ -1,0 +1,15 @@
+<div id="form-1"></div>
+
+<script>
+
+  var form;
+
+  $.getJSON('db/form-elements.json', function (data) {
+
+    form = new Form({
+      holder: 'form-1',
+      formData: data
+    })
+  });
+
+</script>

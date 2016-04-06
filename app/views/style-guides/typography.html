@@ -1,0 +1,163 @@
+<h2>文本</h2>
+
+<h3>标题</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <h1>标题 1</h1>
+  <h2>标题 2</h2>
+  <h3>标题 3</h3>
+  <h4>标题 4</h4>
+  <h5>标题 5</h5>
+  <h6>标题 6</h6>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;h1>标题 1&lt;/h1>
+&lt;h2>标题 2&lt;/h2>
+&lt;h3>标题 3&lt;/h3>
+&lt;h4>标题 4&lt;/h4>
+&lt;h5>标题 5&lt;/h5>
+&lt;h6>标题 6&lt;/h6></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li><code>h1</code>：整体页面的标题。由于页面包含多个 Widget/Tab，每个 Widget/Tab 里不能再用 <code>h1</code>。</li>
+    <li><code>h2</code>：单个 Widget/Tab 的标题。</li>
+    <li><code>h3</code> 以下：按级别递减，不要跳级别（e.g. <code>h2</code> 之后直接用 <code>h4</code>）。</li>
+    <li>有独立组件需要标题的情况（e.g. 数据表、对话框），用 <code>h4</code>。</li>
+  </ul>
+</div>
+
+<h3>段落</h3>
+
+<div class="holder">
+  <h4>显示效果</h4>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet blanditiis commodi, delectus dicta dolorum
+    eos eum explicabo iusto libero, maxime nam necessitatibus placeat quaerat sit temporibus, unde vel voluptatum!</p>
+
+  <p>Commodi inventore ipsa quo tempore? Assumenda commodi consectetur cum debitis deleniti doloremque facilis fugit
+    ipsa, iste non nostrum officiis provident quas qui quia quibusdam saepe soluta vero vitae voluptatem
+    voluptatibus.</p>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;p>段落文本内容&lt;/p></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li><code>div</code> 里的文字尽量不要单独出现，成段的用 <code>p</code> 包起来，其他行内文本用 <code>span</code> 或 <code>label</code> 等。</li>
+  </ul>
+</div>
+
+<h3>引用</h3>
+
+<div class="holder">
+  <h4>显示效果</h4>
+
+  <blockquote>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis consequuntur corporis cumque
+      cupiditate distinctio eaque, hic impedit ipsum iste labore maiores, molestiae nulla odit quidem quisquam
+      reiciendis similique voluptates.</p>
+
+    <p>Animi atque delectus necessitatibus odio, praesentium quaerat recusandae unde! Accusantium amet, aspernatur,
+      dolorem dolores et exercitationem illo laborum libero nam neque pariatur placeat quia quis, quisquam quos
+      repudiandae sapiente ut!</p>
+  </blockquote>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;blockquote>引用内容&lt;/blockquote></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li>引用站外元素，可以用 <code>blockquote</code>。</li>
+    <li>为了保持段落之间的节奏感，<code>blockquote</code> 内部的元素也用 <code>p</code> 包起来。</li>
+  </ul>
+</div>
+
+<h3>列表</h3>
+
+<div class="holder">
+  <h4>显示效果</h4>
+
+  <ul class="list-unordered">
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, tempore.</li>
+    <li>Explicabo in reiciendis soluta. Dignissimos et hic nihil quidem sunt?</li>
+    <li>Consequatur ducimus repellat sed sit. Labore nam quas repudiandae sequi.</li>
+  </ul>
+
+  <ol class="list-ordered">
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, perferendis.</li>
+    <li>Deserunt ea et explicabo nesciunt reiciendis. Aliquam dolore excepturi rem!</li>
+    <li>Accusantium ad aperiam dicta ea facilis laudantium officia quaerat rem.</li>
+  </ol>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;ul class="list-unordered">
+  &lt;li>无序列表项&lt;/li>
+&lt;/ul>
+
+&lt;ol class="list-ordered">
+  &lt;li>有序列表项&lt;/li>
+&lt;/ol>
+</code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li>默认的 <code>ol</code>、<code>ul</code> 样式都已经被清除，因为在实际应用中它们更多被用于导航和菜单。</li>
+    <li>无序列表样式：<code>.list-unordered</code>。</li>
+    <li>有序列表样式：<code>.list-ordered</code>。</li>
+  </ul>
+</div>
+
+<h3>行内文字</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <div class="gap-v">
+    <p><a href="javascript:void(0);">链接</a></p>
+    <p><strong>加粗</strong></p>
+    <p><em>Italics</em></p>
+    <p><span class="label">标签</span> 普通文字</p>
+    <p><span class="number">9</span> 普通文字</p>
+    <p><span class="highlight">高亮</span> 普通文字</p>
+  </div>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;a href="javascript:void(0);">链接&lt;/a>
+&lt;strong>加粗&lt;/strong>
+&lt;em>Italics&lt;/em>
+&lt;span class="label">标签&lt;/span>
+&lt;span class="number">9&lt;/span>
+&lt;span class="highlight">高亮&lt;/span></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li>不指向具体链接的 <code>a</code> 元素 <code>href</code> 写法是 <code>href="javascript:void(0);"</code>。不要写 <code>href="#"</code>，会影响 <code>location.hash</code> 的变化。</li>
+    <li>中文非标题尽量不要加粗，有点丑，需要特殊显示的文字用 <code>span</code> 加样式区分。</li>
+    <li>中文禁止倾斜，丑得不能忍。</li>
+    <li>标签样式：<code>span.label</code>。</li>
+    <li>高亮样式：<code>span.highlight</code>。</li>
+  </ul>
+</div>

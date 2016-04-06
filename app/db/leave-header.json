@@ -1,0 +1,94 @@
+{
+  "reportID": "leave-1",
+  "titleLocaleKey": "LEAVE_DEMO",
+  "selectable": false,
+  "searchable": true,
+  "key": "id",
+  "buttons": [
+    "refresh",
+    "add"
+  ],
+
+  "header": [
+    {
+      "name": "id",
+      "text": "编号",
+      "localeKey": "FIELD_ID",
+      "sortable": false,
+      "editable": false,
+      "type": "int",
+      "hidden": true,
+      "layout": "hidden"
+    },
+    {
+      "name": "applicant",
+      "text": "申请人",
+      "localeKey": "FIELD_NAME_CN",
+      "sortable": false,
+      "editable": false,
+      "type": "string",
+      "hidden": false,
+      "layout": "input"
+    },
+    {
+      "name": "leaveType",
+      "text": "请假类型",
+      "localeKey": "FIELD_LEAVE_TYPE",
+      "sortable": true,
+      "editable": false,
+      "type": "string",
+      "hidden": false,
+      "layout": "select"
+    },
+    {
+      "name": "leaveStartTime",
+      "text": "开始时间",
+      "localeKey": "FIELD_START_TIME",
+      "sortable": true,
+      "editable": false,
+      "type": "date",
+      "hidden": false,
+      "layout": "time"
+    },
+    {
+      "name": "leaveEndTime",
+      "text": "结束时间",
+      "localeKey": "FIELD_END_TIME",
+      "sortable": true,
+      "editable": false,
+      "type": "date",
+      "hidden": false,
+      "layout": "time"
+    },
+    {
+      "name": "leaveRemark",
+      "text": "备注",
+      "localeKey": "FIELD_REMARK",
+      "sortable": true,
+      "editable": false,
+      "type": "string",
+      "hidden": false,
+      "layout": "time"
+    },
+    {
+      "name": "leaveApprover",
+      "text": "审批人",
+      "localeKey": "FIELD_APPROVER",
+      "sortable": true,
+      "editable": false,
+      "type": "string",
+      "hidden": false,
+      "layout": "input"
+    },
+    {
+      "name": "leaveStatus",
+      "text": "审批状态",
+      "localeKey": "FIELD_STATUS",
+      "sortable": true,
+      "editable": false,
+      "type": "string",
+      "hidden": false,
+      "layout": "select"
+    }
+  ]
+}

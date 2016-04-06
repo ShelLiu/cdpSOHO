@@ -1,0 +1,26 @@
+{
+  "totalCount": 34,
+  "items": [
+    {
+      "id": "1",
+      "name": "hongkou",
+      "text": "虹口区",
+      "parentID": "21",
+      "nextIDList": ["2", "3", "4"]
+    },
+    {
+      "id": "2",
+      "name": "huangpu",
+      "text": "黄浦区",
+      "parentID": "21",
+      "nextIDList": ["2", "3", "4"]
+    },
+    {
+      "id": "3",
+      "name": "minhang",
+      "text": "闵行区",
+      "parentID": "21",
+      "nextIDList": ["21", "31", "41"]
+    }
+  ]
+}

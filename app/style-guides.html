@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/base.min.css">
+    <link rel="stylesheet" href="css/style-guides.min.css">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- build:js js/lib/modernizr.min.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+    <title>CDP Cloud Style Guide</title>
+  </head>
+
+  <body>
+    <div class="page-header sg-header">
+      <div class="page-logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="CDP Cloud" data-at2x="images/logo@2x.png">
+        </a>
+      </div>
+
+      <!-- [TODO] -->
+      <div class="pull-right">
+        <div class="btn-group">
+          <button type="button" onclick="CDP.setLang('zh')">中文</button>
+          <button type="button" onclick="CDP.setLang('en')">English</button>
+          <button type="button" onclick="CDP.setLang('jp')">日本語</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sg-sidebar">
+      <div class="sg-side-nav">
+
+        <div class="item-list">
+          <h4 class="trigger">SAP 函数管理</h4>
+
+          <ul>
+            <li><a href="javascript:void(0);" data-load-page="/func/func_mgt.html" data-locale="SAP_FUNC_MGT"></a></li>
+            <li><a href="javascript:void(0);" data-load-page="/func/param_mgt.html" data-locale="SAP_PARAM_MGT"></a></li>
+            <li><a href="javascript:void(0);" data-load-page="/func/param_detail.html" data-locale="SAP_PARAM_DETAIL"></a></li>
+            <li><a href="javascript:void(0);" data-load-page="/func/func_param.html" data-locale="SAP_FUNC_PARAM"></a></li>
+          </ul>
+        </div>
+
+        <div class="item-list">
+          <h4 class="trigger">系统配置管理</h4>
+          <ul>
+            <li><a href="javascript:void(0);" data-load-page="/admin/sysresource_mgt.html" data-locale="SYS_RESOURCE_MGT"></a></li>
+            <li><a href="javascript:void(0);" data-load-page="/flow/admin/apptype_mgt.html" data-locale="SAP_APP_TYPE_MGT"></a></li>
+            <li><a href="javascript:void(0);" data-load-page="/admin/element_mgt.html" data-locale="SYS_ELEMENT_MGT"></a></li>
+          </ul>
+        </div>
+
+        <div class="item-list">
+          <h4 class="trigger">审批流配置</h4>
+
+          <ul>
+            <li><a href="javascript:void(0);" data-load-page="/flow/admin/appgroup_mgt.html" data-locale="SAP_APP_GROUP_MGT"></a></li>
+            <li><a href="javascript:void(0);" data-load-page="/flow/admin/approle_mgt.html" data-locale="SAP_APP_ROLE_MGT"></a></li>
+            <li><a href="javascript:void(0);" data-load-page="/flow/admin/otcompe_mgt.html" data-locale="SAP_OT_COMPE_MGT"></a></li>
+          </ul>
+        </div>
+
+        <div class="item-list">
+          <h4 class="trigger">单据信息管理</h4>
+
+          <ul>
+            <li><a href="javascript:void(0);" data-load-page="/flow/ess/esslv_mgt.html" data-locale="ESS_LV_MGT"></a></li>
+          </ul>
+        </div>
+
+        <div class="item-list">
+          <h4 class="trigger">用户报表测试</h4>
+
+          <ul>
+            <li><a href="javascript:void(0);" data-load-page="/emp/emp_reports.html?urlid=679" data-locale="REPORT_NAME_2"></a></li>
+            <li><a href="javascript:void(0);" data-load-page="/emp/emp_reports.html?urlid=678" data-locale="REPORT_NAME_1"></a></li>
+          </ul>
+        </div>
+
+        <div class="item-list">
+          <h4 class="trigger">员工用户信息管理</h4>
+
+          <ul>
+            <li><a href="javascript:void(0);" data-load-page="/emp/emp_mgt.html" data-locale="EMP_INFO_MGT"></a></li>
+            <li><a href="javascript:void(0);" data-load-page="/admin/role_mgt.html" data-locale="ROLE_MGT"></a></li>
+          </ul>
+        </div>
+
+        <div class="item-list">
+          <h4 class="trigger">控件集合<br>JS Components</h4>
+
+          <ul>
+            <li><a href="javascript:void(0);" data-load-page="/demo-pages/js-library.html" data-locale="JS_LIBRARY">CDP JS Library</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/demo-pages/form-demo.html" data-locale="FORM_DEMO">Form Generator</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/demo-pages/report-demo.html" data-locale="REPORT_DEMO">Report Generator</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/demo-pages/leave-demo.html" data-locale="LEAVE_DEMO">Leave</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/demo-pages/basic-info-demo.html" data-locale="EMP_INFO_DEMO">Employee Info Generator</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/demo-pages/linkage.html" data-locale="LINK_DEMO">Linkage</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/demo-pages/ash-tree.html" data-locale="TREE_DEMO">Tree Structure</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/demo-pages/flowchart-maker.html" data-locale="BTN_APP_FLOW_CHART">Flowchart Maker</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/demo-pages/tree-navigation.html" data-locale="TREE_NAVIGATION">Tree Navigation</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/demo-pages/soho-calendar.html" data-locale="SHEL_TEST_PAGE">Shel-Test-Page</a></li>
+          </ul>
+        </div>
+
+        <div class="item-list">
+          <h4 class="trigger">样式集合<br>CSS Guideline</h4>
+
+          <ul>
+            <li><a href="javascript:void(0);" data-load-page="/style-guides/typography.html">Typography</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/style-guides/controls.html">Controls</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/style-guides/form.html">Form</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/style-guides/nav.html">Navigation</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/style-guides/panel.html">Panel</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/style-guides/dialog.html">Dialog</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/style-guides/table.html">Table</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/style-guides/datagrid.html">Datagrid</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/style-guides/name-card.html">Name Card</a></li>
+            <li><a href="javascript:void(0);" data-load-page="/style-guides/sort-filter.html">Sort &amp; Filter</a></li>
+
+            <li>
+              <a href="javascript:void(0);" class="trigger">Other</a>
+
+              <ul>
+                <li><a href="javascript:void(0);" data-load-page="/style-guides/linkage.html">Linkage</a></li>
+                <li><a href="javascript:void(0);" data-load-page="/style-guides/flowchart-maker.html" data-locale="BTN_APP_FLOW_CHART">Flowchart Maker</a></li>
+              </ul>
+            </li>
+            <!--<li data-load-page="triggers">Triggers</li>-->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sg-content">
+      <div class="holder" id="sg-page"></div>
+    </div>
+
+    <script src="js/config.js"></script>
+
+    <!-- build:js js/lib/global.min.js -->
+    <script src="../bower_components/json3/lib/json3.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/backbone/backbone.js"></script>
+    <script src="../bower_components/moment/moment.js"></script>
+    <script src="../bower_components/retina.js/dist/retina.min.js"></script>
+    <script src="../bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script src="js/lib/jquery.ui.widget.js"></script>
+    <script src="js/lib/jquery.iframe-transport.js"></script>
+    <script src="js/lib/jquery.zfileupload.js"></script>
+    <script src="js/jst.js"></script>
+    <script src="js/modules/underscore-extension.js"></script>
+    <script src="js/modules/backbone-extension.js"></script>
+    <script src="js/modules/basic-tools.js"></script>
+    <script src="js/modules/bind-events.js"></script>
+    <script src="js/modules/memory.js"></script>
+    <script src="js/modules/widget.js"></script>
+    <script src="js/modules/form.js"></script>
+    <script src="js/modules/tab.js"></script>
+    <script src="js/modules/pagination.js"></script>
+    <script src="js/modules/sort-filter.js"></script>
+    <script src="js/modules/grid.js"></script>
+    <script src="js/modules/report.js"></script>
+    <script src="js/modules/dialog.js"></script>
+    <script src="js/modules/linkage.js"></script>
+    <script src="js/modules/datepicker.js"></script>
+    <script src="js/modules/flowchart.js"></script>
+    <script src="js/modules/flowchart-maker.js"></script>
+    <script src="js/modules/tree-navigation.js"></script>
+    <script src="js/modules/calendar.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js js/style-guide.min.js -->
+    <script src="js/singles/style-guide.js"></script>
+    <!-- endbuild -->
+
+    <script>
+      CDP.setLang();
+    </script>
+  </body>
+</html>

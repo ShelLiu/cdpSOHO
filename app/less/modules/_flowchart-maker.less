@@ -1,0 +1,87 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Style Framework
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/07/16
+ */
+
+
+.fchart-maker {
+  &:extend(.clearfix all);
+  width: @fmaker-width;
+
+  .form-confirm {
+    clear: both;
+  }
+}
+
+.fmaker-data,
+.fmaker-btns {
+  float: left;
+}
+
+.fmaker-data {
+  width: @fmaker-data-width;
+}
+
+.fmaker-btns {
+  width: @fmaker-width - @fmaker-data-width;
+}
+
+.fmaker-panel {
+  float: left;
+  width: 50%;
+
+  h5 {
+    font-weight: 700;
+    margin-bottom: @gap-v-sm;
+    text-align: center;
+  }
+}
+
+.fmaker-comp {
+  padding: 0 @gap-h @gap-v 0;
+
+  .fmaker-panel:nth-child(3) > &,
+  .fmaker-panel:nth-child(4) > & {
+    padding-bottom: 0;
+  }
+
+  textarea,
+  select {
+    height: @fmaker-control-height;
+    width: 100%;
+  }
+
+  .item-list {
+    height: @fmaker-control-height - 2;
+    margin: 0;
+    overflow: auto;
+    .user-select(none);
+
+    li {
+      padding-left: @gap-h-sm;
+      padding-right: @gap-h-sm;
+    }
+  }
+}
+
+.fmaker-btns {
+
+  button {
+    border-radius: @border-radius-sm;
+    border: 0;
+    font-style: @font-lg;
+    font-weight: 400;
+    margin-bottom: @gap-h-tiny * 2;
+    margin-right: @gap-h-tiny * 2;
+    padding: 0;
+    width: @control-height * 1.6;
+  }
+}
+
+.fmaker-cond {
+  margin-top: @gap-v - @gap-h-tiny;
+}

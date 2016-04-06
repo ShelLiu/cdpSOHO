@@ -1,0 +1,10 @@
+[
+  {
+    "value": "1",
+    "localeKey": "GENDER_MALE"
+  },
+  {
+    "value": "2",
+    "localeKey": "GENDER_FEMALE"
+  }
+]

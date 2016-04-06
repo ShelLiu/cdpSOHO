@@ -1,0 +1,286 @@
+{
+  "titleLocaleKey": "FORM_DEMO",
+  "className": "",
+  "cols": 1,
+  "buttons": [
+    "confirm",
+    "reset",
+    "cancel"
+  ],
+  "fields": [
+    {
+      "fieldTitleLocaleKey": "FORM_FIELD_1",
+      "controls": [
+
+        {
+          "layout": "input",
+          "labelLocaleKey": "FIELD_NAME_CN",
+          "placeholder": "Ash Lee",
+
+          "validation": {
+            "required": true,
+            "maxlength": 50,
+            "minlength": 2
+          }
+        },
+
+        {
+          "layout": "input",
+          "labelLocaleKey": "FIELD_AGE",
+          "placeholder": "12",
+
+          "validation": {
+            "required": true,
+            "max": 100,
+            "min": 1
+          }
+        },
+
+        {
+          "layout": "textarea",
+          "labelLocaleKey": "EMP_INFO_MGT",
+          "placeholder": "Anything about me",
+
+          "validation": {
+            "required": true,
+            "maxlength": 200,
+            "minlength": 20
+          }
+        },
+
+        {
+          "layout": "date",
+          "labelLocaleKey": "BIRTH_DATE",
+          "value": 487267200,
+
+          "validation": {
+            "required": true,
+            "max": 4133865600,
+            "min": -2209017600
+          }
+        },
+
+        {
+          "layout": "time",
+          "labelLocaleKey": "BIRTH_DATE",
+          "value": -57433651200,
+
+          "validation": {
+            "required": true,
+            "max": 4133865600,
+            "min": -2209017600
+          }
+        },
+
+        {
+          "layout": "startEndDate",
+          "labelLocaleKey": "BIRTH_DATE",
+          "times": [
+            {
+              "value": -57433651200,
+
+              "validation": {
+                "required": true,
+                "max": 4133865600,
+                "min": -2209017600
+              }
+            },
+            {
+              "value": 487267200,
+
+              "validation": {
+                "required": true,
+                "max": 4133865600,
+                "min": -2209017600
+              }
+            }
+          ]
+        },
+
+        {
+          "layout": "startEndTime",
+          "labelLocaleKey": "BIRTH_DATE",
+          "times": [
+            {
+              "value": -57433651200,
+
+              "validation": {
+                "required": true,
+                "max": 4133865600,
+                "min": -2209017600
+              }
+            },
+            {
+              "value": 487267200,
+
+              "validation": {
+                "required": true,
+                "max": 4133865600,
+                "min": -2209017600
+              }
+            }
+          ]
+        },
+
+        {
+          "layout": "checkbox",
+          "labelLocaleKey": "FORM_ELEMENT_1_LABEL",
+          "localeKey": "SEARCH",
+
+          "validation": {
+            "required": true
+          }
+        },
+
+        {
+          "layout": "radio",
+          "labelLocaleKey": "FORM_ELEMENT_1_LABEL",
+          "localeKey": "SEARCH",
+          "checked": true,
+
+          "validation": {
+            "required": true
+          }
+        },
+
+        {
+          "layout": "checkList",
+          "labelLocaleKey": "FORM_ELEMENT_1_LABEL",
+          "checks": [
+            {
+              "layout": "checkbox",
+              "localeKey": "SEARCH"
+            },
+            {
+              "layout": "checkbox",
+              "localeKey": "SEARCH"
+            }
+          ],
+
+          "validation": {
+            "required": true,
+            "min": 2,
+            "max": 3
+          }
+        },
+
+        {
+          "layout": "checkList",
+          "labelLocaleKey": "FORM_ELEMENT_1_LABEL",
+          "checks": [
+            {
+              "id": "r1-1",
+              "name": "r",
+              "layout": "radio",
+              "localeKey": "SEARCH"
+            },
+            {
+              "id": "r1-2",
+              "name": "r",
+              "layout": "radio",
+              "localeKey": "SEARCH"
+            }
+          ],
+
+          "validation": {
+            "required": true
+          }
+        },
+
+        {
+          "layout": "select",
+          "labelLocaleKey": "FORM_ELEMENT_1_LABEL",
+          "value": "1",
+          "list": [
+            {
+              "value": "1",
+              "localeKey": "GENDER_MALE"
+            },
+            {
+              "value": "2",
+              "localeKey": "GENDER_FEMALE"
+            }
+          ],
+
+          "validation": {
+            "required": true
+          }
+        },
+
+        {
+          "name": "attach",
+          "text": "",
+          "localeKey": "",
+          "sortable": false,
+          "editable": true,
+          "type": "string",
+          "layout": "file",
+          "accept": "image/*",
+          "validation": {
+            "required": true
+          }
+        },
+
+        {
+          "layout": "button",
+          "localeKey": "BTN_OK",
+          "className": "btn-primary btn-cute",
+          "action": "ok",
+          "labelLocaleKey": "FORM_ELEMENT_1_LABEL"
+        },
+
+        {
+          "layout": "btnGroup",
+          "labelLocaleKey": "FORM_ELEMENT_1_LABEL",
+          "buttons": [
+            {
+              "layout": "button",
+              "localeKey": "BTN_OK",
+              "action": "ok"
+            },
+            {
+              "layout": "button",
+              "localeKey": "BTN_CANCEL",
+              "action": "cancel"
+            }
+          ]
+        },
+
+        {
+          "layout": "btnBar",
+          "labelLocaleKey": "FORM_ELEMENT_1_LABEL",
+          "btnGroups": [
+            {
+              "buttons": [
+                {
+                  "layout": "button",
+                  "localeKey": "BTN_OK",
+                  "action": "ok"
+                },
+                {
+                  "layout": "button",
+                  "localeKey": "BTN_CANCEL",
+                  "action": "cancel"
+                }
+              ]
+            },
+            {
+              "buttons": [
+                {
+                  "layout": "button",
+                  "localeKey": "BTN_REFRESH",
+                  "action": "refresh"
+                },
+                {
+                  "layout": "button",
+                  "localeKey": "BTN_DELETE",
+                  "action": "delete"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

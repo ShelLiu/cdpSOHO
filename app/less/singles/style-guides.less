@@ -1,0 +1,168 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Style Framework
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/06/16
+ * ===================
+ * - Page Structure
+ * - Side Nav
+ */
+
+/** Libraries */
+@import "../lib/_lesshat";
+@import "../lib/_retina";
+
+/** Settings */
+@import "../settings/_variables";
+@import "../settings/_mixins";
+
+/** Variables */
+@sg-sidebar-width: 20%;
+
+
+/**
+ * Page Structure
+ */
+
+html,
+body {
+  height: auto;
+  overflow: visible;
+}
+
+.sg-header {
+  &:extend(.clearfix all);
+  padding-left: @gap-h;
+  position: static;
+}
+
+.sg-sidebar {
+  float: left;
+  width: @sg-sidebar-width;
+}
+
+.sg-content {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: (100% - @sg-sidebar-width);
+}
+
+// ----- Page Structure end ----- //
+
+
+/**
+ * Side Nav
+ */
+
+.sg-side-nav {
+  border-top: 1px solid #ccc;
+  margin-top: @gap-v;
+
+  .item-list {
+    border: 0;
+    margin: 0;
+
+    &:first-child {
+      border-top-width: 1px;
+    }
+
+    li {
+      border: 0;
+      padding: 0;
+    }
+
+    a {
+      display: block;
+      padding: (@gap-v-sm / 2) @gap-h;
+    }
+
+    > ul {
+      border-bottom: 1px solid #ccc;
+
+      > li {
+
+        a {
+          background-color: #a2a2a2;
+          color: #fff;
+          .ellipsis();
+
+          &:before {
+            content: '+ ';
+          }
+
+          &:hover,
+          &.active {
+            background-color: #838383;
+          }
+        }
+
+        &.active > a {
+          background-color: #838383;
+        }
+
+        > ul {
+
+          > li {
+
+            > a {
+              padding-left: @gap-h-sm * 3.15;
+
+              &:before {
+                content: ' ';
+              }
+            }
+
+            &.active > a {
+              background-color: #838383;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  h4 {
+    background-color: mix(#fdfdfd, #e6e6e6);
+    .background-image(linear-gradient(#fdfdfd, #e6e6e6));
+    border-bottom: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px #fff;
+    color: @tab-header-color;
+    cursor: pointer;
+    font-size: @font-base;
+    line-height: @line-base;
+    padding: 0.5em @gap-h;
+
+    &.active {
+      color: @color-secondary;
+    }
+  }
+
+  ul {
+    display: none;
+    margin: 0 !important;
+  }
+}
+
+// ----- Side Nav end ----- //
+
+
+/**
+ * Other
+ */
+
+.list-unordered {
+
+  pre {
+    margin: @gap-v-sm 0;
+  }
+}
+
+.trigger {
+  cursor: pointer;
+  display: block;
+}
+
+// ----- Other end ----- //

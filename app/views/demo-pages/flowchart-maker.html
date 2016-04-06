@@ -1,0 +1,13 @@
+<div id="f-chart"></div>
+
+<script>
+
+  $(function () {
+
+    $.getJSON('db/fchart/get-fchart.json', function (data) {
+      data.holder = 'f-chart';
+      new FChartMaker(data);
+    });
+  });
+
+</script>

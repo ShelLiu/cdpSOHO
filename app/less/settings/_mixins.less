@@ -1,0 +1,174 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Style Framework
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/06/04
+ * ===================
+ * ~ .arrow-left / arrow-right
+ * ~ .clearfix
+ * ~ .ellipsis
+ * ~ .gap-v       // vertical spacing rhythm
+ *   .gap-v-sm
+ * ~ .holder      // box to contain a section of elements
+ * ~ .icon
+ * ~ .inline-block
+ * ~ .no-padding
+ * ~ .pull-left   // left float
+ * ~ .pull-right  // right float
+ * ~ .slide-down  // slide-down effect for dropdown contents
+ * ~ .pop-up      // dialog & message generator
+ */
+
+.arrow-left,
+.arrow-right,
+.arrow-up,
+.arrow-down {
+  border: transparent solid @arrow-size;
+  display: block;
+  height: 0;
+  margin: 0 auto;
+  position: relative;
+  width: 0;
+}
+
+.arrow-left {
+  border-right-color: @arrow-color;
+  left: floor(-@arrow-size / 2);
+}
+
+.arrow-right {
+  border-left-color: @arrow-color;
+  left: ceil(@arrow-size / 2);
+}
+
+.arrow-up {
+  border-bottom-color: @arrow-color;
+  top: -(@arrow-size / 2);
+}
+
+.arrow-down {
+  border-top-color: @arrow-color;
+  top: (@arrow-size / 2);
+}
+
+.clearfix {
+
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  *zoom: 1;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gap-v,
+.gap-v-sm {
+  margin-bottom: 0;
+  margin-top: @gap-v;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.gap-v-sm {
+  margin-top: @gap-v-sm;
+}
+
+.gap-v-lg {
+  margin-top: @gap-v-lg;
+}
+
+.holder {
+  &:extend(.gap-v all);
+  padding: @gap-v @gap-h;
+}
+
+.icon {
+  .inline-block();
+
+  button > & {
+    vertical-align: middle;
+  }
+}
+
+.inline-block {
+  display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.slide-down {
+  position: absolute;
+  .transform(scaleY(0));
+  .transform-origin(top);
+  .transition(transform @duration @timing);
+
+  .opened > & {
+    .transform(scaleY(1));
+  }
+
+  .no-csstransforms & {
+    display: none;
+  }
+
+  .no-csstransforms .opened > & {
+    display: block;
+  }
+}
+
+.pop-up {
+  opacity: 0;
+  position: absolute;
+    z-index: @z-pop-up;
+  .scale(0);
+  .transition(transform @duration @timing, opacity @duration @timing);
+  width: @dialog-default-width;
+
+  &.opened {
+    opacity: 1;
+    .scale(1);
+  }
+
+  &.removing {
+    opacity: 0;
+    .scale(0);
+  }
+
+  .no-csstransitions & {
+    display: none;
+
+    &.opened {
+      display: block;
+    }
+
+    &.removing {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<h2>面板</h2>
+
+<h3>通用</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <div class="panel">
+    <div class="header">
+      <h4>面板标题</h4>
+
+      <div class="opr">
+        <button type="button" class="btn-link">×</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <p>内容</p>
+      <p>内容</p>
+      <p>内容</p>
+      <p>内容</p>
+      <p>内容</p>
+      <p>内容</p>
+      <p>很多内容……</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;div class="panel">
+  &lt;div class="header">
+    &lt;h4>面板标题&lt;/h4>
+
+    &lt;div class="opr">
+      &lt;button type="button" class="btn-link">×&lt;/button>
+    &lt;/div>
+  &lt;/div>
+
+  &lt;div class="content">...&lt;/div>
+&lt;/div></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li><code>.panel</code> 样式全站通用，目前 <code>.dialog</code>、<code>.widget</code> 都使用这套格式。</li>
+    <li>要使用 <code>.panel</code> 样式，必须按照如下格式组织元素结构：<pre><code>.panel
+  - .header  // 头部
+    - h4     // 标题
+    - .opr   // 操作按钮
+  - .content // 内容</code></pre></li>
+    <li>在白底色上看，面板的边框不清晰。实际使用时下方会有图片或深色背景。</li>
+  </ul>
+</div>

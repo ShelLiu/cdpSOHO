@@ -1,0 +1,146 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Style Framework
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/06/05
+ */
+
+#triggers {
+  margin: 5em auto;
+  position: relative;
+  text-align: center;
+}
+
+#triggers a {
+  background-color: rgb(216, 216, 216);
+  border-radius: 50%;
+  color: #fff;
+  display: inline-block;
+  font-family: 'Microsoft Yahei', sans-serif;
+  font-size: 40px;
+  height: 2em;
+  line-height: 1.9;
+  margin: 0 10px;
+  position: relative;
+  text-decoration: none;
+  width: 2em;
+}
+
+#triggers a:hover ~ #line:after {
+  -webkit-animation: right 0.75s cubic-bezier(.53,0,.63,1) infinite;
+}
+
+#triggers a.active ~ #line:after {
+  left: 0;
+  right: 0;
+}
+
+#triggers a:before {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  content: ' ';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-transform: scale(0);
+}
+
+#triggers a:hover {
+  -webkit-animation: bounce 0.5s cubic-bezier(.53,0,.63,1) infinite;
+}
+
+#triggers a:hover:before {
+  -webkit-animation: bounceBefore 0.5s cubic-bezier(.53,0,.63,1) infinite;
+}
+
+#line {
+  background-color: rgba(0, 0, 0, 0.15);
+  font-size: 40px;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1em;
+  z-index: -1;
+}
+
+#line:after {
+  background-color: #000;
+  content: ' ';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+@-webkit-keyframes right {
+  0% {
+    right: 100%;
+    left: 0;
+  }
+  50% {
+    right: 0;
+    left: 0;
+  }
+  100% {
+    right: 0;
+    left: 100%;
+  }
+}
+
+#quan:hover,
+#quan.active {
+  background-color: #0074D9;
+}
+
+#quan:hover ~ #line:after,
+#quan.active ~ #line:after {
+  background-color: #0074D9;
+}
+
+#xing:hover {
+  background-color: #FF4136;
+}
+
+#xing:hover ~ #line:after {
+  background-color: #FF4136;
+}
+
+#ri:hover {
+  background-color: #3D9970;
+}
+
+#ri:hover ~ #line:after {
+  background-color: #3D9970;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  40% {
+    -webkit-transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@-webkit-keyframes bounceBefore {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.3);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(0);
+  }
+}

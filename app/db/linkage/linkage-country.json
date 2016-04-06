@@ -1,0 +1,17 @@
+{
+  "totalCount": 34,
+  "items": [
+    {
+      "id": "1",
+      "name": "jiangwan",
+      "text": "江湾镇",
+      "parentID": "1"
+    },
+    {
+      "id": "2",
+      "name": "gumei",
+      "text": "古美地区",
+      "parentID": "2"
+    }
+  ]
+}

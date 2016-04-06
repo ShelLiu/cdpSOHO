@@ -1,0 +1,384 @@
+<h2>表单</h2>
+
+<h3>普通表单</h3>
+
+<div class="holder">
+  <h4>显示效果：</h4>
+
+  <form>
+    <fieldset>
+      <h3>单列</h3>
+
+      <div class="form-group">
+        <div class="form-item-line form-full-line">
+          <label class="form-label">头像：</label>
+          <div class="form-control">
+            <img src="images/ava-small.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="form-item-line">
+          <label class="form-label">中文名：</label>
+          <div class="form-control">
+            <input type="text" required>
+          </div>
+        </div>
+
+        <div class="form-item-line">
+          <label class="form-label">起止时间：</label>
+          <div class="form-control">
+            <div class="form-date form-date-start">
+              <span class="form-date-label">Start Time</span>
+
+              <input type="text" required>
+
+              <div class="dropdown form-date-hour">
+                <div class="dropdown-face">
+                  <span class="dropdown-text">10</span>
+                  <button type="button" class="btn-icon btn-link">▼</button>
+                </div>
+
+                <div class="dropdown-list">
+                  <ul>
+                    <li><a href="javascript:void(0);">1</a></li>
+                    <li><a href="javascript:void(0);">2</a></li>
+                    <li><a href="javascript:void(0);">3</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              :
+
+              <div class="dropdown form-date-minute">
+                <div class="dropdown-face">
+                  <span class="dropdown-text">30</span>
+                  <button type="button" class="btn-icon btn-link">▼</button>
+                </div>
+
+                <div class="dropdown-list">
+                  <ul>
+                    <li><a href="javascript:void(0);">1</a></li>
+                    <li><a href="javascript:void(0);">2</a></li>
+                    <li><a href="javascript:void(0);">3</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-date form-date-end">
+              <span class="form-date-label">End Time</span>
+
+              <input type="text" required>
+
+              <div class="dropdown form-date-hour">
+                <div class="dropdown-face">
+                  <span class="dropdown-text">10</span>
+                  <button type="button" class="btn-icon btn-link">▼</button>
+                </div>
+
+                <div class="dropdown-list">
+                  <ul>
+                    <li><a href="javascript:void(0);">1</a></li>
+                    <li><a href="javascript:void(0);">2</a></li>
+                    <li><a href="javascript:void(0);">3</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              :
+
+              <div class="dropdown form-date-minute">
+                <div class="dropdown-face">
+                  <span class="dropdown-text">30</span>
+                  <button type="button" class="btn-icon btn-link">▼</button>
+                </div>
+
+                <div class="dropdown-list">
+                  <ul>
+                    <li><a href="javascript:void(0);">1</a></li>
+                    <li><a href="javascript:void(0);">2</a></li>
+                    <li><a href="javascript:void(0);">3</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-item-line">
+          <label class="form-label">性别：</label>
+          <div class="form-control">
+            <select required>
+              <option></option>
+              <option>男</option>
+              <option>女</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-item-line">
+          <label class="form-label">出生日期：</label>
+          <div class="form-control form-date">
+            <input type="text" required>
+          </div>
+        </div>
+
+        <div class="form-item-line">
+          <label class="form-label">子女个数：</label>
+          <div class="form-control">
+            <input type="number" min="0" placeholder="纯数字">
+          </div>
+        </div>
+
+        <div class="form-item-line">
+          <label class="form-label">自我鉴定：</label>
+          <div class="form-control">
+            <textarea>SB
+SB
+SB
+SB
+SB</textarea>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <h3>双列</h3>
+
+      <div class="form-group form-two-col">
+        <div class="form-item-line">
+          <label class="form-label">头像：</label>
+          <div class="form-control">
+            <img src="images/ava-small.jpg" alt="">
+          </div>
+
+          <label class="form-label">中文名：</label>
+          <div class="form-control">
+            <input type="text" required>
+          </div>
+        </div>
+
+        <div class="form-item-line">
+          <label class="form-label">性别：</label>
+          <div class="form-control">
+            <select required>
+              <option></option>
+              <option>男</option>
+              <option>女</option>
+            </select>
+          </div>
+
+          <label class="form-label">出生日期：</label>
+          <div class="form-control">
+            <input type="date" required>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <h3>静态文本</h3>
+
+      <div class="form-group">
+        <div class="form-item-line">
+          <label class="form-label">头像：</label>
+          <div class="form-control form-static">
+            <img src="images/ava-small.jpg" alt="头像">
+          </div>
+        </div>
+
+        <div class="form-item-line">
+          <label class="form-label">中文名：</label>
+          <div class="form-control form-static">蔡喵姬</div>
+        </div>
+      </div>
+    </fieldset>
+
+    <div class="form-confirm">
+      <button type="submit" class="btn-secondary btn-cute">确认</button>
+      <button type="button" class="btn-gray btn-cute">取消</button>
+    </div>
+  </form>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;form>
+  &lt;fieldset>
+    &lt;h3>单列&lt;/h3>
+
+    &lt;div class="form-group">
+      &lt;div class="form-item-line form-full-line">
+        &lt;label class="form-label">头像：&lt;/label>
+        &lt;div class="form-control">
+          &lt;img src="images/ava-small.jpg" alt="">
+        &lt;/div>
+      &lt;/div>
+
+      &lt;div class="form-item-line">
+        &lt;label class="form-label">中文名：&lt;/label>
+        &lt;div class="form-control">
+          &lt;input type="text" required>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/fieldset>
+&lt;/form></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li>结构：<code>form > fieldset > (h3 + .form-group > .form-item-line > ( label.form-label + .form-control ))</code></li>
+    <li>一组 <code>label.form-label + .form-control</code> 为基本元素。</li>
+    <li><code>.form-item-line</code> 强制一组元素单独占用一行。</li>
+    <li><code>.form-full-line</code> 为 <code>.form-item-line</code> 的叠加样式，表示内部控件的长度延伸满一行。</li>
+    <li>如果 <code>.form-control</code> 内部为纯文本，则叠加样式 <code>.form-static</code>，可以和标签对齐。</li>
+    <li>如需两列显示，需要两步：
+      <ol class="list-ordered">
+        <li>为 <code>form</code> 添加 <code>form.form-item-view</code>。</li>
+        <li>每个 <code>.form-item-line</code> 中的 <code>label/control</code> 组改为两对。</li>
+      </ol>
+    </li>
+  </ul>
+</div>
+
+
+<h3>列表</h3>
+
+<div class="holder">
+  <h4>显示效果：（静态 &amp; 单列）</h4>
+
+  <form class="form-item-view">
+    <div class="form-group">
+      <div class="form-item-line">
+        <label class="form-label">头像：</label>
+        <div class="form-control form-static">头像图片</div>
+      </div>
+
+      <div class="form-item-line">
+        <label class="form-label">中文名：</label>
+        <div class="form-control form-static">蔡喵姬</div>
+      </div>
+
+      <div class="form-item-line">
+        <label class="form-label">英文名：</label>
+        <div class="form-control form-static">Ash Lee</div>
+      </div>
+
+      <div class="form-item-line">
+        <label class="form-label">人事事件类型：</label>
+        <div class="form-control form-static">I got troubled thoughts And the self-esteem to match. What a catch, what a catchYou'll never catch us So just let me be Said I'll be fine Till the hospital or American Embassy Miss Flack said I still want you back I got troubled thoughts.</div>
+      </div>
+    </div>
+  </form>
+
+  <h4>显示效果：列表（静态 &amp; 双列）</h4>
+
+  <form class="form-item-view form-two-col">
+    <div class="form-group">
+      <div class="form-item-line">
+        <label class="form-label">中文名：</label>
+        <div class="form-control form-static">蔡喵姬</div>
+
+        <label class="form-label">英文名：</label>
+        <div class="form-control form-static">Ash Lee</div>
+      </div>
+
+      <div class="form-item-line">
+        <label class="form-label">人事事件类型：</label>
+        <div class="form-control form-static">I got troubled thoughts And the self-esteem to match. What a catch, what a catchYou'll never catch us So just let me be Said I'll be fine Till the hospital or American Embassy Miss Flack said I still want you back I got troubled thoughts.</div>
+
+        <label class="form-label">&nbsp;</label>
+        <div class="form-control form-static">&nbsp;</div>
+      </div>
+    </div>
+  </form>
+
+  <h4>显示效果：列表（编辑 & 单列）</h4>
+
+  <form class="form-item-view">
+    <div class="form-group">
+      <div class="form-item-line">
+        <label class="form-label">中文名：</label>
+        <div class="form-control">
+          <input type="text">
+        </div>
+      </div>
+
+      <div class="form-item-line">
+        <label class="form-label">英文名：</label>
+        <div class="form-control">
+          <input type="text">
+        </div>
+      </div>
+
+      <div class="form-item-line">
+        <label class="form-label">人事事件类型：</label>
+        <div class="form-control">
+          <textarea>I got troubled thoughts And the self-esteem to match. What a catch, what a catch. You'll never catch us So just let me be Said I'll be fine Till the hospital or American Embassy Miss Flack said I still want you back I got troubled thoughts.</textarea>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <h4>显示效果：列表（编辑 & 双列）</h4>
+
+  <form class="form-item-view form-two-col">
+    <div class="form-group">
+      <div class="form-item-line">
+        <label class="form-label">中文名：</label>
+        <div class="form-control">
+          <input type="text">
+        </div>
+
+        <label class="form-label">英文名：</label>
+        <div class="form-control">
+          <input type="text">
+        </div>
+      </div>
+
+      <div class="form-item-line">
+        <label class="form-label">人事事件类型：</label>
+        <div class="form-control">
+          <textarea>I got troubled thoughts And the self-esteem to match. What a catch, what a catch. You'll never catch us So just let me be Said I'll be fine Till the hospital or American Embassy Miss Flack said I still want you back I got troubled thoughts.</textarea>
+        </div>
+
+        <label class="form-label">&nbsp;</label>
+        <div class="form-control">&nbsp;</div>
+      </div>
+    </div>
+  </form>
+
+  <hr>
+
+  <h4>代码：</h4>
+
+  <pre><code>&lt;form class="form-item-view form-two-col">
+  &lt;div class="form-group">
+    &lt;div class="form-item-line">
+      &lt;label class="form-label">中文名：&lt;/label>
+      &lt;div class="form-control form-static">蔡喵姬&lt;/div>
+
+      &lt;label class="form-label">英文名：&lt;/label>
+      &lt;div class="form-control form-static">Ash Lee&lt;/div>
+    &lt;/div>、
+  &lt;/div>
+&lt;/form></code></pre>
+
+  <h4>说明：</h4>
+
+  <ul class="list-unordered">
+    <li>结构：<code>form.form-item-view > .form-group > .form-item-line > ( label.form-label + .form-control )</code></li>
+    <li>每对 <code>label/control</code> 用一个 <code>.form-item-line</code> 包装起来，用以添加背景色。</li>
+    <li>如需两列显示，需要两步：
+      <ol class="list-ordered">
+        <li>为 <code>form</code> 添加 <code>form.form-item-view</code>。</li>
+        <li>每个 <code>.form-item-line</code> 中的 <code>label/control</code> 组改为两对。</li>
+      </ol>
+    </li>
+    <li>如果一行只有一列，补上一组空数据，填上颜色。</li>
+  </ul>
+</div>
+

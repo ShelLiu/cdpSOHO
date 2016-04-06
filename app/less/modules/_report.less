@@ -1,0 +1,232 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Style Framework
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/06/16
+ * ===================
+ * - General & Scrolling
+ * - Header
+ * - Filter (easy)
+ * - Footer
+ */
+
+
+/**
+ * General & Scrolling
+ */
+
+.report {
+  &:extend(.panel);
+  position: relative;
+
+  &.scroll {
+
+    .report-header {
+      background-color: #fff;
+      overflow: hidden;
+      position: fixed;
+        left: (@gap-h * 2 + 26px);
+        right: (@gap-h * 2 + 26px);
+        top: 0;
+        z-index: @z-report-header;
+      width: 100%;
+      .animation(reports 0.3s);
+
+      .form-group {
+        padding: 0;
+      }
+
+      .form-label,
+      .form-control {
+        display: inline;
+      }
+
+      .form-control {
+        margin-right: 2em;
+      }
+    }
+
+    .report-data-head {
+      display: table;
+    }
+  }
+
+  .report-data-head {
+    display: none;
+  }
+
+  .table-holder {
+    margin-top: 0;
+  }
+}
+
+@-webkit-keyframes reports {
+  0% {
+    -webkit-transform: translateY(-50%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes reports {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// ----- General & Scrolling end ----- //
+
+
+/**
+ * Header
+ */
+
+.report-header {
+
+  > h4 {
+    &:extend(.holder);
+    border-bottom: 1px solid @report-heading-border;
+    color: @report-heading-color;
+    font-size: @report-heading-size;
+  }
+}
+
+.report-filter {
+  &:extend(.clearfix all);
+  &:extend(.holder);
+  margin: 0;
+
+  > .form-search {
+    float: right;
+  }
+
+  > .btn-bar {
+    float: left;
+  }
+}
+
+.report-data-head-box {
+  position: relative;
+  width: 9999em;
+}
+
+.report-data-head,
+.reports-data {
+  margin: 0;
+}
+
+.report-data-head {
+  position: relative;
+  width: auto;
+}
+
+// ----- Header end ----- //
+
+
+/**
+ * Filter (easy)
+ */
+
+.report-filter-easy {
+  background-color: @report-filter-easy-bg;
+  border-color: @report-filter-easy-bg;
+  box-shadow: @report-filter-easy-shadow;
+  display: none;
+
+  th {
+    border-color: @report-filter-easy-bg;
+    font-weight: 400;
+  }
+
+  .dropdown {
+    display: block;
+    max-width: 100%;
+    min-width: 100%;
+    margin-bottom: @gap-v-sm;
+    width: @report-filter-input-width;
+  }
+
+  input {
+    max-width: 100%;
+    min-width: 100%;
+    width: @report-filter-input-width;
+  }
+}
+
+.report-filter-easy-confirm {
+  background-color: @report-filter-easy-bg;
+  display: none;
+
+  td {
+    padding-top: 0;
+    text-align: center;
+  }
+}
+
+// ----- Filter (easy) end ----- //
+
+/**
+ * Data
+ */
+
+.report-data-head,
+.report-data {
+
+  th,
+  td {
+
+    &:first-child {
+      padding-left: @gap-h;
+    }
+    &:last-child {
+      padding-right: @gap-h;
+    }
+  }
+}
+
+// ----- Data end ----- //
+
+
+/**
+ * Footer
+ */
+
+.report-footer {
+  &:extend(.holder);
+  margin: 0;
+}
+
+// ----- Footer end ----- //
+
+
+/**
+ * Loading
+ */
+
+
+.report-loading {
+  background: rgba(255, 255, 255, 0.5) url(../images/loading4.gif) center no-repeat;
+  display: none;
+  position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+  .loading & {
+    display: block;
+  }
+
+  .no-opacity & {
+    background-color: #fff;
+  }
+}
+
+// ----- Loading ----- //

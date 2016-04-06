@@ -1,0 +1,19 @@
+{
+  "formulaDefine": "Ash 萌萌哒！&#10;萌萌哒！",
+  "remark": "Ash 一统江湖！",
+  "regVar": ["萌", "很萌", "炒鸡萌", "很萌", "炒鸡萌", "很萌", "炒鸡萌", "很萌", "炒鸡萌"],
+  "jsFunction": [
+    {
+      "text": "取整数",
+      "val": "Math.floor()"
+    },
+    {
+      "text": "四舍五入",
+      "val": "Math.round()"
+    },
+    {
+      "text": "最大值",
+      "val": "Math.max( , )"
+    }
+  ]
+}

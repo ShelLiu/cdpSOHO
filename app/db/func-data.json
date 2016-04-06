@@ -1,0 +1,23 @@
+{
+  "totalCount": 100,
+  "items": [
+    {
+      "pt001Id": 1,
+      "sapFunctionName": "蔡喵姬",
+      "portalTable": "Ash Lee",
+      "returnCuringType": "1",
+      "sysEnUs": 487267200000,
+      "sysZhCn": "前端大人",
+      "sysJaJp": "PDC"
+    },
+    {
+      "pt001Id": 1,
+      "sapFunctionName": "蔡喵姬",
+      "portalTable": "Ash Lee",
+      "returnCuringType": "2",
+      "sysEnUs": 487267200000,
+      "sysZhCn": "前端大人",
+      "sysJaJp": "PDC"
+    }
+  ]
+}

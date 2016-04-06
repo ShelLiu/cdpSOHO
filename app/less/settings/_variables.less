@@ -1,0 +1,677 @@
+/**
+ * CDP Cloud Rebuilt
+ * ===================
+ * Author: Ash Zhang
+ * Created: 2014/06/04
+ * ===================
+ * Style Framework
+ * ===================
+ * - Color
+ * - Media Query Boundary
+ * - Global Settings
+ * - Typography
+ * - Form
+ * - List
+ * - Navigation
+ * - Pop-up
+ * - Datagrid
+ * - Report
+ * - Panel
+ * - Progress
+ * - Card
+ * - Layout
+ * - Datepicker
+ * - Sort
+ * - Icons
+ * - Arrow
+ * - Flow Chart
+ * - Flow Chart Maker
+ * - Z-Index
+ */
+
+
+/**
+ * Color
+ */
+
+@color-gray-darkest:  darken(@color-gray, 30%);
+@color-gray-darker:   #404040;
+@color-gray-dark:     darken(@color-gray, 10%);
+@color-gray:          #777;
+@color-gray-light:    lighten(@color-gray, 10%);
+@color-gray-lighter:  #adadad;
+@color-gray-lightest: #dcdcdc;
+
+@color-primary:       #e51700;
+@color-primary-dark:  #be1111;
+@color-primary-light: lighten(@color-primary, 5%);
+
+@color-secondary:         #00ad9b;
+@color-secondary-dark:    #037d6f;
+@color-secondary-darker:  #008a7c;
+@color-secondary-light:   #33bdaf;
+@color-secondary-lighter: #d9f3f0;
+@color-secondary-lightest:  #ecf9f8;
+
+@color-error:         #ff4136;
+@color-error-dark:    darken(@color-error, 5%);
+@color-error-light:   lighten(@color-error, 37%);
+
+@color-pink:  #ff5eb1;
+@color-purple: #dacbf4;
+
+@color-bg-medium: @color-gray-lightest;
+@color-border:    @color-gray-lighter;
+@color-border-light:  lighten(@color-gray-lighter, 4%);
+
+@color-shadow:  rgba(0, 0, 0, 0.2);
+@color-light:   rgba(255, 255, 255, 0.5);
+
+// ----- Color end ----- //
+
+
+/**
+ * Media Query Boundary
+ */
+
+@mq-mobile:     480px;
+@mq-pad-height: 768px;
+@mq-pad-width:  1024px;
+@mq-screen-lg:  1200px;
+@mq-screen-xl:  1368px;
+
+// ----- Media Query Boundary end ----- //
+
+
+/**
+ * Global Settings
+ */
+
+// Spacing
+@gap-h:       20px;
+@gap-h-sm:    (@gap-h / 2);
+@gap-h-lg:    (@gap-h * 2);
+@gap-h-tiny:  3px;
+@gap-v:       20px;
+@gap-v-sm:    (@gap-v / 2);
+@gap-v-lg:    (@gap-v * 2);
+
+// Element Shape
+@border-width:      1px;
+@border-radius:     5px;
+@border-radius-sm:  3px;
+
+// Shadow
+@text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+
+// Animation
+@timing:          ease-in-out;
+@timing-back:     cubic-bezier(0.175, 0.885, 0.320, 1.275);
+@timing-bounce:   cubic-bezier(0.680, -0.550, 0.265, 1.550);
+@duration:        0.3s;
+@duration-short:  0.2s;
+
+// Icon
+@icon-path:   ~'url(../images/icons/tiny.png)';
+
+// ----- Global Settings end ----- //
+
+
+/**
+ * Typography
+ */
+
+// Text
+@font-base: 14px;
+@font-sm:   12px;
+@font-lg:   16px;
+@line-base: @gap-v;
+@font-family:       ~"OpenSans, 'Helvetica Neue', Helvetica, Arial, \5FAE\8F6F\96C5\9ED1, sans-serif";
+@font-family-mono:  ~"Consolas, sans-serif";
+@color-text:    @color-gray-darker;
+@color-hr:      @color-border;
+
+// Link
+@color-link:        @color-secondary;
+@color-link-hover:  @color-secondary-dark;
+@color-link-active: @color-secondary-dark;
+
+// Heading
+@h1-size:   40px;
+@h2-size:   @font-lg + 4;
+@h3-size:   @font-lg + 2;
+@h4-size:   @font-lg;
+@h5-size:   @font-base;
+@h6-size:   @font-sm;
+
+// Code
+@color-code-bg: @color-gray-lightest;
+
+// Label & Number
+@label-color: #fff;
+@label-bg:    @color-secondary;
+@number-border-color: @color-secondary-dark;
+@number-border-width: 1px;
+@number-opacity:  0.75;
+@number-shadow:   inset 0 1px 1px rgba(255, 255, 255, 0.35), 0 2px 4px rgba(0, 0, 0, 0.2);
+
+// Highlight
+@color-highlight:     #fff;
+@color-highlight-bg:  @color-primary;
+
+// ----- Typography end ----- //
+
+
+/**
+ * Form
+ */
+
+// Common Settings
+@control-height:        30px;
+@control-border-color:  #ddd;
+@disabled-opacity:      0.7;
+@control-sm-height:     26px;
+@control-default-width: 250px;
+
+// Button
+@btn-text-shadow:   0 1px 1px rgba(0, 0, 0, 0.3);
+@btn-shadow:        0 1px 0 rgba(0, 0, 0, 0.3);
+@btn-active-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.45);
+@btn-default-bg-light:      #fdfdfd;
+@btn-default-bg-dark:       #f4f4f4;
+@btn-default-border-color:  #d9d9d9;
+@btn-default-color:         @color-text;
+@btn-default-active-bg-light: #fcfcfc;
+@btn-default-active-bg-dark:  #e7e7e7;
+@btn-default-active-border:   #fff;
+@btn-primary-bg-light:      #e42b17;
+@btn-primary-bg-dark:       #d11803;
+@btn-primary-border-color:  @color-primary-dark;
+@btn-primary-color:         #fff;
+@btn-primary-active-bg-light: #e1412f;
+@btn-primary-active-bg-dark:  #bb1b09;
+@btn-secondary-bg-light:      #0bb09f;
+@btn-secondary-bg-dark:       #02a695;
+@btn-secondary-border-color:  @color-secondary-darker;
+@btn-secondary-color:         #fff;
+@btn-secondary-active-bg-light: #2db7a9;
+@btn-secondary-active-bg-dark:  #069182;
+@btn-white-border-color:  @color-gray-lighter;
+@btn-gray-bg-light:      #bababa;
+@btn-gray-bg-dark:       #b0b0b0;
+@btn-gray-border-color:  #a1a1a1;
+@btn-gray-color:         #fff;
+@btn-gray-active-bg-light: #c7c7c7;
+@btn-gray-active-bg-dark:  #8f8f8f;
+@btn-light-gray-bg-light:         #f1f1f1;
+@btn-light-gray-bg-dark:          #dedede;
+@btn-light-gray-color:            @color-text;
+@btn-light-gray-active-bg-light:  #efefef;
+@btn-light-gray-active-bg-dark:   #bbbbbb;
+@btn-link-color:        @color-link;
+@btn-link-hover-color:  @color-link-hover;
+@btn-link-active-color: @color-link-active;
+@btn-link-color:        @color-gray;
+@btn-link-hover-color:  @color-gray-light;
+@btn-link-active-color: @color-gray-dark;
+@btn-link-primary-color:        @color-link;
+@btn-link-primary-hover-color:  @color-link-hover;
+@btn-link-primary-active-color: @color-link-active;
+@btn-icon-font-size:  @font-sm;
+@btn-transparent-color: #fff;
+@btn-sm-height:         @line-base;
+@btn-sm-shadow:         0 2px 1px rgba(0, 0, 0, 0.2);
+@btn-sm-active-shadow:  inset 0 1px 5px rgba(0, 0, 0, 0.2);
+@btn-sm-border:         #adadad;
+@btn-lg-height:       48px;
+@btn-lg-font-size:    @font-lg;
+@btn-lg-padding-side: @font-lg;
+@btn-lg-shadow:       inset 0 1px 2px #fff, 0 3px 0 -1px rgba(0, 0, 0, 0.2);
+@btn-cute-padding-side: @gap-h * 2;
+
+// Input and Textarea
+@input-bg:              #fff;
+@input-border-width:    1px;
+@input-padding-side:    ((@control-height - @font-base - @input-border-width) / 2);
+@input-shadow:          inset 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0 5px rgba(0, 0, 0, 0.08);
+@input-focus-bg:        #f6f6f6;
+@input-focus-color:     @color-secondary;
+@input-error-color:     @color-error;
+@textarea-default-line: 5;
+
+
+// Checkbox and Radio
+@check-size:        14px;
+@check-bg:          @color-gray-lighter;
+@check-hover-color: @color-gray-dark;
+@check-checked-bg:  @color-secondary;
+
+// Files
+
+// Switch
+@switch-width:  60px;
+@switch-bg:         @color-gray-lightest;
+@switch-checked-bg: @color-secondary;
+@switch-toggle-bg:      #fff;
+@switch-toggle-size:    20px;
+@switch-toggle-shadow:  0 1px 2px rgba(0, 0, 0, 0.3);
+
+// Search
+@search-border-color: #d0d0d0;
+@search-bg-light: #fff;
+@search-bg-dark:  #fbfbfb;
+@search-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+@search-icon-size:  16px;
+@search-sm-icon-size: 12px;
+@search-focus-bg:     #fff;
+@search-focus-border: #adadad;
+@search-focus-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+
+// Date
+@form-date-icon-size: 16px;
+
+// Attachment
+@form-attach-color:       @color-text;
+@form-attach-icon-height: 28px;
+@form-attach-icon-width:  26px;
+@form-attach-remove-size: 16px;
+
+// Structure
+@form-label-width:        24%;
+@form-label-margin-side:  4%;
+@form-two-col-label-width: 32%;
+@form-two-col-label-margin-side: 8%;
+
+// List View
+@form-list-view-height: @control-height;
+@form-list-view-border-width: 5px;
+@form-list-view-border-color: @color-secondary;
+@form-list-view-bg:       #fff;
+@form-list-view-strip-bg: @color-secondary-lightest;
+@form-list-view-edit-bg:      @input-bg;
+@form-list-view-edit-border:  @color-gray-light;
+
+// Grid Select
+@grid-select-min-width:   500px;
+@grid-select-min-height:  390px;
+
+// ----- Form end ----- //
+
+
+/**
+ * List
+ */
+
+// Common Settings
+
+// Vertical
+
+// Horizontal
+
+// Item List
+@item-list-bg:            #fff;
+@item-list-border-color:  @color-gray-lighter;
+@item-list-min-height:    @control-height;
+@item-list-hover-bg:      @color-secondary-lighter;
+
+// Dropdown
+@dropdown-max-height:   200px;
+@dropdown-border-color: @color-gray-lighter;
+@dropdown-bg:           #f6f6f6;
+@dropdown-height:       24px;
+@dropdown-border-width: 1px;
+@dropdown-border-color: @color-gray-lighter;
+@dropdown-hover-bg:     @color-secondary;
+@dropdown-hover-color:  #fff;
+@dropdown-focus-shadow: 0 0 5px @color-secondary;
+
+// Picker
+@picker-border-color: #adadad;
+@picker-gap-v:        8px;
+@picker-bg-light:     #fdfdfd;
+@picker-bg-dark:      #f4f4f4;
+@picker-input-color:  @color-secondary-light;
+@picker-input-focus-bg: #fff;
+@picker-input-focus-color:  @color-secondary;
+@picker-active-bg:    @color-secondary;
+@picker-active-color: #fff;
+
+// Tree
+@tree-nav-icon-size:@search-sm-icon-size;
+@tree-nav-icon-margin:5px;
+
+// ----- List end ----- //
+
+
+/**
+ * Navigation
+ */
+
+// Breadcrumb
+
+// Tab (Horizontal)
+@tab-header-bg:     #e8e8e8;
+@tab-header-color:  @color-text;
+@tab-border-color:  @tab-header-bg;
+@tab-header-height: 26px;
+@tab-active-bg:     #fff;
+@tab-active-border-color: @color-border;
+@tab-content-bg:    #fff;
+@tab-max-height:    200px;
+@tab-min-height:    100px;
+
+// Tab (Vertical)
+@tab-v-header-width:        280px;
+@tab-v-header-font-size:    20px;
+@tab-v-header-bg:           #f6f6f6;
+@tab-v-header-color:        #adadad;
+@tab-v-header-line-height:  30px;
+@tab-v-header-min-height:   50px;
+@tab-v-header-active-border-width:  5px;
+@tab-v-header-active-border-color:  @color-secondary;
+@tab-v-header-active-bg:    #e4e4e4;
+@tab-v-header-active-color: @color-text;
+
+// Pagination
+@page-border-color: @color-border;
+@page-color:        @color-text;
+@page-hover-bg:     @color-border;
+@page-hover-color:  #fff;
+@page-active-bg:      #fff;
+@page-active-color:   @color-secondary;
+@page-active-border:  @color-secondary;
+
+// Step
+
+// Pill
+
+// TreeNavigation
+@blue-gradient-start: #cdf0ed;
+@blue-gradient-end: #c0e3e0;
+
+
+// ----- Navigation end ----- //
+
+
+/**
+ * Pop-up
+ */
+
+// Dialog
+@dialog-default-width:      700px;
+@dialog-content-max-height: 600px;
+@dialog-mask-bg:            #000;
+@dialog-conform-font-size:  @font-lg;
+
+// Message
+@message-border:    5px solid rgba(0, 0, 0, 0.1);
+@message-font-size: @font-lg;
+@message-min-width: 300px;
+
+// Tooltip
+
+// ----- Pop-up end ----- //
+
+
+/**
+ * Datagrid
+ */
+
+@table-min-height:    (@line-base + @gap-v + 1) * 11;
+@table-border-color:  #d2d2d2;
+@table-head-bg:     #f1f1f1;
+@table-head-color:  #222;
+@table-strip-bg:  #f6f6f6;
+@table-td-padding-top:  @gap-v-sm;
+@table-td-padding-side: @gap-h-sm;
+@table-body-color:  @color-gray;
+@table-selected-bg:     @color-secondary-light;
+@table-selected-color:  #fff;
+@table-sort-arrow-mute: @color-gray-lighter;
+@table-sort-arrow:      @color-text;
+@grid-header-min-width: 3em;
+
+// ----- Datagrid end ----- //
+
+
+/**
+ * Report
+ */
+
+@report-heading-color:  @color-secondary;
+@report-heading-size:   24px;
+@report-heading-border: #d1d1d1;
+@report-filter-input-width: 120px;
+@report-filter-easy-bg: @color-secondary-lightest;
+@report-filter-easy-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.15);
+
+// ----- Report end ----- //
+
+
+/**
+ * Panel
+ */
+
+@panel-bg:      #fff;
+@panel-shadow:  0 5px 20px rgba(0, 0, 0, 0.2);
+@panel-header-border-color:  #d1d1d1;
+@panel-header-color:         @color-secondary;
+@panel-header-size:          22px;
+
+// ----- Panel end ----- //
+
+
+/**
+ * Progress
+ */
+
+// Bar
+
+// Loading
+
+// ----- Progress end ----- //
+
+
+/**
+ * Widget
+ */
+
+// Box
+@widget-box-padding-side: 0;
+
+// Item
+@widget-gap:    30px;
+@widget-bg:     #fff;
+@widget-shadow:         0 14px 27px rgba(0, 0, 0, 0.46);
+@widget-shadow-narrow:  0 7px 13px rgba(0, 0, 0, 0.3);
+@widget-heading-color:        @color-secondary;
+@widget-heading-size:         24px;
+@widget-heading-border-color: @color-border-light;
+@widget-icon-size:  24px;
+
+// Billboard
+@w-billboard-heading-gap-h: 30px;
+@w-billboard-heading-bg:    rgba(0, 0, 0, 0.7);
+@w-billboard-heading-color: #fff;
+@w-billboard-heading-size:  28px;
+@w-billboard-header-gap-h:  15px;
+@w-billboard-sub-bg:        @color-primary;
+@w-billboard-sub-size:      @font-sm;
+
+// Calendar
+@w-calendar-heading-bg:     @color-secondary;
+@w-calendar-heading-height: 34px;
+@w-calendar-heading-size:   20px;
+@w-calendar-week-bg:      @color-secondary-darker;
+@w-calendar-week-color:   #fff;
+@w-calendar-week-height:  24px;
+@w-calendar-date-height:        76px;
+@w-calendar-date-border-color:  @color-border;
+@w-calendar-date-active-bg:     @color-secondary-lighter;
+@w-calendar-opr-size: 8px;
+@w-calendar-opr-bg:   @color-secondary;
+@w-calendar-footer-height:  30px;
+@w-calendar-footer-bg:      @color-secondary;
+
+// Todo
+@w-todo-gap:        15px;
+@w-todo-sep-color:  @color-border;
+@w-todo-tag-bg:             @color-pink;
+@w-todo-tag-color:          #fff;
+@w-todo-tag-border-radius:  12px 0 0 12px;
+@w-todo-tag-padding:        2px 5px 2px 12px;
+@w-todo-tag-width:          40%;
+
+// Shortcuts
+@w-shortcut-color:      @color-text;
+@w-shortcut-icon-size:  32px;
+@w-shortcut-sep-color:  #c5bfbf;
+
+// ----- Widget end ----- //
+
+
+/**
+ * Sort
+ */
+
+@sort-title-size:     @font-base;
+@sort-co-width:       370px;
+@sort-priority-width: 530px;
+@sort-name-width:     350px;
+@sort-name-bg:        #fff;
+
+// ----- Sort end ----- //
+
+
+/**
+ * Card
+ */
+
+@card-min-width:  442px;
+@card-ava-size:   160px;
+@card-border-color: @color-border;
+@card-name-size:  22px;
+@card-name-margin-top:  15px;
+@card-info-gap:   5px;
+@card-bg-top:     #fefefe;
+@card-bg-bottom:  #f0f0f0;
+@card-shadow:     0 3px 0 rgba(0, 0, 0, 0.15);
+
+// ----- Card end ----- //
+
+
+/**
+ * Layout
+ */
+
+// Container
+@container-full-margin-side:        100px;
+@container-full-margin-side-narrow: 50px;
+
+// Page Header
+@page-header-height:        104px;
+@page-header-bg:            #fff;
+@page-header-border-width:  1px;
+@page-header-border-color:  @color-border;
+@page-header-shadow:        0 3px 3px rgba(0, 0, 0, 0.1);
+@page-logo-width-narrow:    200px;
+@page-nav-icon-width:         92px;
+@page-nav-icon-width-narrow:  30px;
+@page-nav-icon-color:         @color-gray-lighter;
+@page-nav-icon-bg:            #fff;
+@page-nav-icon-active-bg:           @color-bg-medium;
+@page-nav-icon-active-border-width: 6px;
+@page-nav-icon-active-border-color: @color-primary;
+@page-nav-icon-active-color:        @color-primary;
+@page-nav-icon-span-size:     25px;
+@page-search-height:              35px;
+@page-search-width:               300px;
+@page-search-width-narrow:        200px;
+@page-search-margin-right:        @gap-h-lg;
+@page-search-margin-right-narrow: @gap-h;
+@page-avatar-size:          42px;
+@page-avatar-margin-right:  @gap-h;
+@page-message-height:       20px;
+@page-message-icon-height:  23px;
+@page-message-icon-width:   28px;
+
+// Page Widget
+@page-widgets-header-gap-v:   30px;
+@page-widgets-header-height:  @btn-lg-height + (@page-widgets-header-gap-v * 2);
+@page-widgets-add-size:       20px;
+
+// ----- Layout end ----- //
+
+
+/**
+ * Datepicker
+ */
+
+@date-bg: #fff;
+@date-border: @color-border;
+@date-title-border: @color-text;
+@date-item-width: 35px;
+@date-today-hover-bg: #c0efea;
+@date-today-hover-color: @color-text;
+@date-today-color: #fff;
+@date-today-bg: @color-secondary;
+@date-disabled-bg: #fff;
+@date-disabled-color: @color-border;
+@date-week-title-color: @color-secondary;
+@date-week-title-size: @font-sm;
+@date-arrow-hover-color:  @color-text;
+
+// ----- Datepicker End ----- //
+
+
+/**
+ * Icon
+ */
+
+@icon-btn-path: '../images/icons/buttons.png';
+@icon-btn-size: 20px;
+@icon-close-size: 28px;
+
+// ----- Icon end ----- //
+
+/**
+ * Arrow
+ */
+
+@arrow-size:  5px;
+@arrow-color: @color-gray;
+
+// ----- Arrow end ----- //
+
+
+/**
+ * Flow Chart
+ */
+
+@fchart-item-width:   100px;
+@fchart-item-height:  30px;
+@fchart-item-bg:      @color-purple;
+@fchart-item-border-color:  #b0b0b0;
+@fchart-item-hover-bg:      darken(@color-purple, 5);
+@fchart-arrow-color:  #2f2f2f;
+
+// ----- Flow Chart end ----- //
+
+
+@fmaker-width:          900px;
+@fmaker-data-width:     450px;
+@fmaker-control-height: 200px;
+
+/**
+ * Z-Index
+ */
+
+@z-page-header:   1;
+@z-dropdown-open: 1002;
+@z-report-header: 10;
+@z-pop-up:        1000;
+@z-datepicker:    1001;
+@z-tab-header:    2;
+@z-tab-page:      1;
+
+// ----- Z-Index end ----- //

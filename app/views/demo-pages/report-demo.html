@@ -1,0 +1,458 @@
+<div id="report-1" class="gap-v"></div>
+
+<hr>
+
+<h4>代码：</h4>
+
+<pre><code>var report = new Report({
+  // 报表父元素 ID
+  reportID: 'report-1',
+
+  // 优先从 headerURL 获取内容，如果没有设置，则取静态 JSON 内容
+  headerURL: 'db/report-header.json',
+  headerJSON: reportJSON,
+
+  // 获取 header 时需要的额外参数
+  headerParams: {},
+
+  // 报表数据来源
+  dataURL: 'db/report-data.json',
+
+  // 获取数据时需要的额外参数
+  dataParams: {},
+
+  // 添加 &amp; 编辑数据时的表单来源
+  formURL: 'db/report-form.json',
+
+  // 覆盖取来的 header 内容
+  options: {
+    reportID: 'report-1',
+    titleLocaleKey: 'BTN_OK',
+    selectable: false
+  },
+
+  // 加载报表之后额外执行的操作
+  onload: function () {
+    CDP.reportScroll($('#sg-page'));
+  }
+});</code></pre>
+
+<h4>说明：</h4>
+
+<ul class="list-unordered">
+  <li>
+    请求一个 report 分为两步，都是 <code>JSON</code> 格式文件：
+    <ul class="list-unordered">
+      <li>请求设置</li>
+      <li>请求内容</li>
+    </ul>
+  </li>
+
+  <li>
+    设置（前台应该给所有值设置默认值）
+    <ul class="list-unordered">
+      <li><code>reportID {string}</code>：装载报表的容器，与页面上 <code>div</code> 的 <code>id</code> 一致。</li>
+      <li><code>titleLocaleKey {string}</code>：标题。</li>
+      <li><code>selectable {boolean}</code>：是否显示多选框。</li>
+      <li><code>searchable {boolean}</code>：是否显示搜索框。</li>
+      <li><code>sort {string}</code>：<code>name order</code>，复杂排序以逗号隔开，如：<code>empNameZH desc, gender asc</code>。</li>
+      <li><code>key {string}</code>：主键的 <code>name</code>。</li>
+      <li><code>buttons {array}</code>：操作按钮列表。</li>
+      <li><code>header {array}</code>：如下：</li>
+    </ul>
+  </li>
+
+  <li>
+    <code>header</code>：表头
+    <ul class="list-unordered">
+      <li><code>name {string}</code>：字段名称。</li>
+      <li><code>text {string}</code>：显示文本（固定）。</li>
+      <li><code>localeKey {string}</code>：显示文本（多语言）。</li>
+      <li><code>sortable {boolean}</code>：本列是否可以排序。</li>
+      <li><code>editable {boolean}</code>：是否可以编辑。</li>
+      <li><code>filterable {boolean}</code>：是否可以筛选（默认为 <code>true</code>）。</li>
+      <li><code>order {desc/asc}</code>：排序默认是升序或者降序。</li>
+      <li><code>editable {boolean}</code>：本列是否可以编辑。</li>
+      <li><code>validation {object}</code>：编辑时的验证规则（HTML5）。</li>
+      <li><code>hidden {boolean}</code>：是否在表格中显示。</li>
+      <li><code>type {string}</code>：在表格中显示数据的方式：
+        <ul class="list-unordered">
+          <li><code>int</code></li>
+          <li><code>float</code></li>
+          <li><code>decimal</code></li>
+          <li><code>date</code>：数据以秒为单位，需通过 <code>_.timeSecToStr(time)</code> 转换</li>
+          <li><code>string</code></li>
+        </ul>
+      </li>
+      <li><code>layout {string}</code>：打开表单编辑的方式（与表单相同）：
+        <ul class="list-unordered">
+          <li><code>hidden</code>：不编辑</li>
+          <li><code>input</code>：文本框</li>
+          <li><code>textarea</code></li>
+          <li><code>checkbox</code></li>
+          <li><code>radio</code></li>
+          <li><code>select</code>：需提供 <code>list</code> 供选择，每条 list 元素有 <code>value/localeKey</code>，传输数据时接收 <code>value</code>。</li>
+          <li><code>date</code>：日期选择</li>
+          <li><code>time</code>：日期+时间选择</li>
+          <li><code>startEndDate</code>：开始/结束日期联动</li>
+          <li><code>startEndTime</code>：开始/结束时间联动</li>
+          <li><code>gridSelect</code>：相当于嵌套的报表，需提供 <code>header</code>、<code>dataURL</code>、<code>key</code>（选取到的值）、<code>text</code>（选取后显示的文本）。</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <code>data</code>：数据
+    <ul class="list-unordered">
+      <li><code>totalCount {number}</code>：查询总条目（非当前显示条目）。</li>
+      <li><code>items {array}</code>：每条数据都是一组 key/value，可以有空值。</li>
+    </ul>
+  </li>
+
+  <li>
+    备注：
+    <ul class="list-unordered">
+      <li><code>date</code> 类型均以秒为单位的时间戳形式传输。</li>
+    </ul>
+  </li>
+</ul>
+
+<script>
+  var reportJSON = {
+    "titleLocaleKey": "REPORT_NAME_1",
+    "selectable": true,
+    "key": "id",
+    "buttons": [
+      "refresh",
+      "filter",
+      "export"
+    ],
+    "header": [
+      {
+        "name": "id",
+        "text": "编号",
+        "localeKey": "FIELD_ID",
+        "sortable": false,
+        "editable": false,
+        "type": "int",
+        "layout": "hidden",
+        "validation": {}
+      },
+      {
+        "name": "empNameZH",
+        "text": "姓名",
+        "localeKey": "FIELD_NAME_CN",
+        "sortable": true,
+        "editable": true,
+        "type": "string",
+        "layout": "input",
+        "validation": {
+          "maxlength": "50",
+          "required": true
+        }
+      },
+      {
+        "name": "empNameEN",
+        "text": "英文名",
+        "localeKey": "FIELD_NAME_EN",
+        "sortable": true,
+        "order": "desc",
+        "editable": true,
+        "type": "string",
+        "layout": "input",
+        "validation": {
+          "maxlength": "100",
+          "required": true
+        }
+      },
+      {
+        "name": "gender",
+        "text": "性别",
+        "localeKey": "FIELD_GENDER",
+        "sortable": true,
+        "order": "asc",
+        "editable": true,
+        "type": "string",
+        "layout": "select",
+        "validation": {
+          "maxlength": "2",
+          "required": true
+        }
+      },
+      {
+        "name": "dob",
+        "text": "出生日期",
+        "localeKey": "FIELD_DOB",
+        "sortable": true,
+        "editable": true,
+        "type": "date",
+        "format": "YYYY/MM/DD",
+        "layout": "date",
+        "validation": {
+          "required": true
+        }
+      }
+    ]
+  };
+
+  function btnSyncOnclick(type) {
+
+    $.get('../a/b/c', {
+        type: type
+      })
+      .done(function (data) {
+        report.refreshData(data);
+      });
+  }
+
+  var report = new Report({
+    reportID: 'report-1',
+    headerURL: 'db/report-header.json',
+//    headerJSON: reportJSON,
+    headerParams: {
+      temp: "temp"
+    },
+    dataURL: 'db/report-data.json',
+    dataParams: {
+      temp: "tempData"
+    },
+    formURL: 'db/report-form.json',
+    formJSON: {
+      "url": "127.0.0.1",
+      "className": "",
+      "cols": 1,
+      "buttons": [
+        "confirm",
+        "cancel"
+      ],
+      "fields": [
+        {
+          "controls": [
+            {
+              "name": "id",
+              "text": "编号",
+              "localeKey": "FIELD_ID",
+              "sortable": false,
+              "editable": false,
+              "type": "int",
+              "hidden": true,
+              "layout": "hidden"
+            },
+            {
+              "name": "empNameZH",
+              "text": "姓名",
+              "localeKey": "FIELD_NAME_CN",
+              "sortable": true,
+              "order": "desc",
+              "editable": true,
+              "type": "string",
+              "layout": "input",
+              "validation": {
+                "required": true,
+                "minlength": 2,
+                "maxlength": 50
+              }
+            },
+            {
+              "name": "empNameEN",
+              "text": "英文名",
+              "localeKey": "FIELD_NAME_EN",
+              "sortable": true,
+              "type": "string",
+              "layout": "input",
+              "validation": {
+                "required": true,
+                "minlength": 3,
+                "maxlength": 100
+              }
+            },
+            {
+              "name": "gender",
+              "text": "性别",
+              "localeKey": "FIELD_GENDER",
+              "sortable": true,
+              "editable": true,
+              "type": "string",
+              "layout": "select",
+              "validation": {
+                "required": true
+              },
+              "list": [
+                {
+                  "value": "1",
+                  "localeKey": "GENDER_MALE"
+                },
+                {
+                  "value": "2",
+                  "localeKey": "GENDER_FEMALE"
+                }
+              ]
+            },
+            {
+              "name": "dob",
+              "text": "出生日期",
+              "localeKey": "FIELD_DOB",
+              "sortable": true,
+              "editable": true,
+              "type": "date",
+              "format": "YYYY/MM/DD",
+              "layout": "date",
+              "validation": {
+                "required": true,
+                "min": -2209017600,
+                "max": "today"
+              }
+            },
+            {
+              "name": "position",
+              "text": "职位",
+              "localeKey": "FIELD_POSITION",
+              "sortable": true,
+              "editable": true,
+              "type": "string",
+              "layout": "input",
+              "validation": {
+                "required": true,
+                "maxlength": 100
+              }
+            },
+            {
+              "name": "dead",
+              "text": "死掉了",
+              "localeKey": "FORM_DEAD",
+              "sortable": true,
+              "editable": true,
+              "filterable": false,
+              "type": "string",
+              "layout": "checkList",
+              "checks": [
+                {
+                  "name": "dead",
+                  "className": "check-inline",
+                  "layout": "radio",
+                  "value": true,
+                  "localeKey": "YES"
+                },
+                {
+                  "name": "dead",
+                  "className": "check-inline",
+                  "layout": "radio",
+                  "value": false,
+                  "localeKey": "NO"
+                }
+              ],
+              "validation": {
+                "required": true
+              }
+            },
+            {
+              "name": "deptId",
+              "text": "部门",
+              "localeKey": "FIELD_DEPT",
+              "sortable": true,
+              "editable": true,
+              "type": "int",
+              "hidden": true,
+              "layout": "gridSelect",
+              "validation": {
+                "required": true,
+                "maxlength": 100
+              },
+              "gridParam": {
+                "dataURL": "db/report-grid.json",
+                "dataParams": {
+                  "id": "5"
+                },
+                "key": "deptId",
+                "text": "deptName",
+                "searchable": true,
+                "header": [
+                  {
+                    "name": "deptId",
+                    "text": "部门 ID",
+                    "localeKey": "FIELD_DEPT",
+                    "sortable": true,
+                    "editable": true,
+                    "type": "int",
+                    "layout": "input"
+                  },
+                  {
+                    "name": "deptName",
+                    "text": "部门",
+                    "localeKey": "FIELD_DEPT",
+                    "sortable": true,
+                    "editable": true,
+                    "type": "string",
+                    "layout": "input"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "deptName",
+              "text": "部门",
+              "localeKey": "FIELD_DEPT",
+              "sortable": true,
+              "editable": true,
+              "type": "string",
+              "layout": "hidden"
+            }
+          ]
+        }
+      ],
+      beforeSubmit: function (formData) {
+        formData['Author'] = 'Ash';
+      },
+      afterSubmit: function (formData) {
+        new Confirm('Ash 大人萌萌哒')
+            .yes(function () {
+              CDP.message('你说的对！');
+            })
+            .no(function () {
+              CDP.message('去死吧！');
+            });
+      }
+    },
+    // Overwrite JSON settings
+    options: {
+      reportID: 'report-1',
+      customButtons: [
+        {
+          id: 'BTN_SYNC_1',
+          icon: 'sync',
+          localeKey: 'BTN_SYNC',
+          onclick: function () {
+            var s = this.getSelectedItems();
+
+            if (s && s.length) {
+
+            } else {
+              CDP.message(CDP.parseLocaleKey('MSG_NO_SELECT'));
+            }
+          },
+          arguments: ['all']
+        }
+      ]
+    },
+//==============
+//function begin
+
+    onload: function () {
+//      CDP.reportScroll($('#sg-page'));
+    },
+
+    onclickrow: function () {
+//      this.show;
+    },
+
+    onOpenAdd: function () {
+      console.log('哈哈哈ADD')
+    },
+
+    onOpenEdit: function () {
+      console.log('哈哈哈EDIT')
+    }
+  });
+
+</script>

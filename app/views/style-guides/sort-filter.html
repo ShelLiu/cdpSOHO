@@ -1,0 +1,346 @@
+<h2>排序和筛选</h2>
+
+<h3>排序（携带代码版）</h3>
+
+<div class="holder">
+  <h4>显示效果</h4>
+
+  <div id="sort" class="gap-v"></div>
+</div>
+
+<h3>排序</h3>
+
+<div class="holder">
+  <h4>显示效果</h4>
+
+  <div class="sort gap-v">
+    <div class="sort-column-order">
+      <div class="sort-header">
+        <h4>Column Visibility &amp; Order</h4>
+
+        <div class="sort-opr">
+          <button type="button" class="btn-icon"><span class="arrow-up"></span></button>
+          <button type="button" class="btn-icon"><span class="arrow-down"></span></button>
+        </div>
+      </div>
+
+      <div class="picker">
+        <div class="picker-list">
+          <ul>
+            <li class="active">
+              <label class="check"><input type="checkbox"> <span>姓名 1</span></label>
+
+              <div class="sort-item-opr">
+                <button type="button" class="btn-icon sort-stick-top" data-action="stick-top">顶</button>
+                <button type="button" class="btn-icon sort-stick-top" data-action="sort-it"><span class="arrow-right"></span></button>
+              </div>
+            </li>
+
+            <li>
+              <label class="check"><input type="checkbox"> <span>性别 1</span></label>
+
+              <div class="sort-item-opr">
+                <button type="button" class="btn-icon sort-stick-top" data-action="stick-top">顶</button>
+                <button type="button" class="btn-icon sort-stick-top" data-action="sort-it"><span class="arrow-right"></span></button>
+              </div>
+            </li>
+
+            <li>
+              <label class="check"><input type="checkbox"> <span>年龄 1</span></label>
+
+              <div class="sort-item-opr">
+                <button type="button" class="btn-icon sort-stick-top" data-action="stick-top">顶</button>
+                <button type="button" class="btn-icon sort-stick-top" data-action="sort-it"><span class="arrow-right"></span></button>
+              </div>
+            </li>
+
+            <li>
+              <label class="check"><input type="checkbox"> <span>选择项 1</span></label>
+
+              <div class="sort-item-opr">
+                <button type="button" class="btn-icon sort-stick-top" data-action="stick-top">顶</button>
+                <button type="button" class="btn-icon sort-stick-top" data-action="sort-it"><span class="arrow-right"></span></button>
+              </div>
+            </li>
+
+            <li>
+              <label class="check"><input type="checkbox"> <span>选择项 1</span></label>
+
+              <div class="sort-item-opr">
+                <button type="button" class="btn-icon sort-stick-top" data-action="stick-top">顶</button>
+                <button type="button" class="btn-icon sort-stick-top" data-action="sort-it"><span class="arrow-right"></span></button>
+              </div>
+            </li>
+
+            <li>
+              <label class="check"><input type="checkbox"> <span>选择项 1</span></label>
+
+              <div class="sort-item-opr">
+                <button type="button" class="btn-icon sort-stick-top" data-action="stick-top">顶</button>
+                <button type="button" class="btn-icon sort-stick-top" data-action="sort-it"><span class="arrow-right"></span></button>
+              </div>
+            </li>
+
+            <li>
+              <label class="check"><input type="checkbox"> <span>选择项 1</span></label>
+
+              <div class="sort-item-opr">
+                <button type="button" class="btn-icon sort-stick-top" data-action="stick-top">顶</button>
+                <button type="button" class="btn-icon sort-stick-top" data-action="sort-it"><span class="arrow-right"></span></button>
+              </div>
+            </li>
+
+            <li>
+              <label class="check"><input type="checkbox"> <span>选择项 1</span></label>
+
+              <div class="sort-item-opr">
+                <button type="button" class="btn-icon sort-stick-top" data-action="stick-top">顶</button>
+                <button type="button" class="btn-icon sort-stick-top" data-action="sort-it"><span class="arrow-right"></span></button>
+              </div>
+            </li>
+
+            <li>
+              <label class="check"><input type="checkbox"> <span>选择项 1</span></label>
+
+              <div class="sort-item-opr">
+                <button type="button" class="btn-icon sort-stick-top" data-action="stick-top">顶</button>
+                <button type="button" class="btn-icon sort-stick-top" data-action="sort-it"><span class="arrow-right"></span></button>
+              </div>
+            </li>
+
+            <li>
+              <label class="check"><input type="checkbox"> <span>选择项 1</span></label>
+
+              <div class="sort-item-opr">
+                <button type="button" class="btn-icon sort-stick-top" data-action="stick-top">顶</button>
+                <button type="button" class="btn-icon sort-stick-top" data-action="sort-it"><span class="arrow-right"></span></button>
+              </div>
+            </li>
+
+            <li>
+              <label class="check"><input type="checkbox"> <span>选择项 1</span></label>
+
+              <div class="sort-item-opr">
+                <button type="button" class="btn-icon sort-stick-top" data-action="stick-top">顶</button>
+                <button type="button" class="btn-icon sort-stick-top" data-action="sort-it"><span class="arrow-right"></span></button>
+              </div>
+            </li>
+
+            <li>
+              <label class="check"><input type="checkbox"> <span>选择项 1</span></label>
+
+              <div class="sort-item-opr">
+                <button type="button" class="btn-icon sort-stick-top" data-action="stick-top">顶</button>
+                <button type="button" class="btn-icon sort-stick-top" data-action="sort-it"><span class="arrow-right"></span></button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sort-priority">
+      <div class="sort-header">
+        <h4>Sort Priority</h4>
+
+        <div class="sort-opr">
+          <button type="button" class="btn-icon"><span class="arrow-up"></span></button>
+          <button type="button" class="btn-icon"><span class="arrow-down"></span></button>
+        </div>
+      </div>
+
+      <div class="picker">
+        <div class="picker-list">
+          <ul>
+            <li>
+              <div class="sort-name">
+                <span>姓氏</span>
+
+                <div class="sort-item-opr">
+                  <button type="button" class="btn-icon sort-stick-top" data-action="stick-top">顶</button>
+                  <button type="button" class="btn-icon sort-stick-top" data-action="sort-it"><span class="arrow-left"></span></button>
+                </div>
+              </div>
+              <div class="sort-a-z">
+                <label class="check check-inline"><input type="radio"> <span>A-Z</span></label>
+                <label class="check check-inline"><input type="radio" checked> <span>Z-A</span></label>
+              </div>
+            </li>
+
+            <li class="active">
+              <div class="sort-name">
+                <span>性别</span>
+
+                <div class="sort-item-opr">
+                  <button type="button" class="btn-icon sort-stick-top" data-action="stick-top">顶</button>
+                  <button type="button" class="btn-icon sort-stick-top" data-action="sort-it"><span class="arrow-left"></span></button>
+                </div>
+              </div>
+              <div class="sort-a-z">
+                <label class="check check-inline"><input type="radio"> <span>A-Z</span></label>
+                <label class="check check-inline"><input type="radio" checked> <span>Z-A</span></label>
+              </div>
+            </li>
+
+            <li>
+              <div class="sort-name">
+                <span>年龄</span>
+
+                <div class="sort-item-opr">
+                  <button type="button" class="btn-icon sort-stick-top" data-action="stick-top">顶</button>
+                  <button type="button" class="btn-icon sort-stick-top" data-action="sort-it"><span class="arrow-left"></span></button>
+                </div>
+              </div>
+              <div class="sort-a-z">
+                <label class="check check-inline"><input type="radio"> <span>A-Z</span></label>
+                <label class="check check-inline"><input type="radio" checked> <span>Z-A</span></label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var showHeaders = [
+        {
+          "name": "id",
+          "text": "编号",
+          "localeKey": "FIELD_ID",
+          "sortable": false,
+          "editable": false,
+          "type": "int",
+          "hidden": true,
+          "layout": "hidden",
+          "validation": {}
+        },
+        {
+          "name": "empNameZH",
+          "text": "姓名",
+          "localeKey": "FIELD_NAME_CN",
+          "sortable": true,
+          "order": "desc",
+          "editable": true,
+          "type": "string",
+          "layout": "input",
+          "validation": {
+            "maxlength": "50",
+            "required": true
+          }
+        },
+        {
+          "name": "empNameEN",
+          "text": "英文名",
+          "localeKey": "FIELD_NAME_EN",
+          "sortable": true,
+          "type": "string",
+          "layout": "input",
+          "validation": {
+            "maxlength": "100",
+            "required": true
+          }
+        },
+        {
+          "name": "gender",
+          "text": "性别",
+          "localeKey": "FIELD_GENDER",
+          "sortable": true,
+          "editable": true,
+          "type": "string",
+          "layout": "select",
+          "validation": {
+            "maxlength": "2",
+            "required": true
+          },
+          "list": [
+            {
+              "value": "1",
+              "localeKey": "GENDER_MALE"
+            },
+            {
+              "value": "2",
+              "localeKey": "GENDER_FEMALE"
+            }
+          ]
+        },
+        {
+          "name": "dob",
+          "text": "出生日期",
+          "localeKey": "FIELD_DOB",
+          "sortable": true,
+          "editable": true,
+          "type": "date",
+          "format": "YYYY/MM/DD",
+          "layout": "date",
+          "validation": {
+            "required": true
+          }
+        },
+        {
+          "name": "position",
+          "text": "职位",
+          "localeKey": "FIELD_POSITION",
+          "sortable": true,
+          "editable": true,
+          "type": "string",
+          "layout": "input",
+          "validation": {
+            "maxlength": "100",
+            "required": true
+          }
+        },
+        {
+          "name": "deptId",
+          "text": "部门",
+          "localeKey": "FIELD_DEPT",
+          "sortable": false,
+          "editable": true,
+          "type": "int",
+          "hidden": true,
+          "layout": "gridSelect",
+          "validation": {
+            "maxlength": "100",
+            "required": true
+          },
+          "gridParam": {
+            "dataURL": "db/report-data.json",
+            "key": "deptId",
+            "text": "sfParamCode",
+            "header": [
+              {
+                "name": "deptId",
+                "text": "部门",
+                "localeKey": "FIELD_DEPT",
+                "sortable": true,
+                "editable": true,
+                "type": "int",
+                "layout": "input"
+              },
+              {
+                "name": "deptName",
+                "text": "部门",
+                "localeKey": "FIELD_DEPT",
+                "sortable": true,
+                "editable": true,
+                "type": "string",
+                "layout": "input"
+              }
+            ]
+          }
+        },
+        {
+          "name": "deptName",
+          "text": "部门",
+          "localeKey": "FIELD_DEPT",
+          "sortable": false,
+          "editable": true,
+          "type": "string",
+          "layout": "hidden"
+        }
+      ],
+      sort = new Sort(showHeaders);
+
+  $('#sort').append(sort.view.$el);
+</script>

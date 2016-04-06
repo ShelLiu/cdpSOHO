@@ -1,0 +1,106 @@
+{
+    "title": "我的工资单",
+"user": {
+        "number": 984,
+        "name": "阿史那沙苾",
+        "department": "PDC",
+        "position": "界面设计",
+        "joinTime": "2013/12"
+    },
+    "accountTime": {
+        "year": 2014,
+        "month": 3
+    },
+    "sideBySide": false,
+    "message": "感谢您对公司发展做出的努力和贡献。若对本次薪资有任何疑问，欢迎联系人力资源团队。联系电话：021-62682839-8639 Joy shen。谢谢！",
+    "logoUri": "images/logos/qoros.png",
+    "compensationItems": [
+        {
+            "title": "工资",
+            "list": [
+                {
+                    "name": "基本工资（人民币）",
+                    "currency": "¥",
+                    "value": 4000
+                },
+                {
+                    "name": "基本工资（美元）",
+                    "currency": "$",
+                    "value": 4000
+                },
+                {
+                    "name": "实际基本工资",
+                    "currency": "¥",
+                    "value": 4000
+                }
+            ]
+        },
+        {
+            "title": "津贴",
+            "list": [
+                {
+                    "name": "实际生活补贴",
+                    "currency": "¥",
+                    "value": 0
+                }
+            ]
+        }
+    ],
+    "deductionItems": [
+        {
+            "title": "社保 & 商保扣款",
+            "list": [
+                {
+                    "name": "养老保险-员工",
+                    "currency": "¥",
+                    "value": 320
+                },
+                {
+                    "name": "医疗保险-员工",
+                    "currency": "$",
+                    "value": 80
+                },
+                {
+                    "name": "失业保险-员工",
+                    "currency": "¥",
+                    "value": 18.1
+                }
+            ]
+        },
+        {
+            "title": "个税",
+            "list": [
+                {
+                    "name": "工资税",
+                    "currency": "¥",
+                    "value": 0
+                }
+            ]
+        }
+    ],
+    "netPay": {
+        "title": "总计",
+        "list": [
+            {
+                "name": "实发工资",
+                "currency": "¥",
+                "value": 2014.3
+            },
+            {
+                "name": "实发奖金",
+                "currency": "¥",
+                "value": 0.1
+            }
+        ],
+        "total": [
+            {
+                "currency": "¥",
+                "value": 3302
+            },
+            {
+                "currency": "$",
+                "value": 15
+            }
+        ]
+    }
+}
