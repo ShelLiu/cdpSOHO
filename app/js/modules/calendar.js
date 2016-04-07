@@ -75,8 +75,8 @@
       $.when(
         $.get(settings.dataURL, settings.dataParams || {})
       ).then(
-        function(data){
-          self.makeCalendar(data);
+        function(events){
+          self.makeCalendar(events);
       });
 
     } else {
