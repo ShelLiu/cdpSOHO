@@ -64,7 +64,9 @@ body .fc { /* extra precedence to overcome jqui */
   filter: alpha(opacity=30); /* for IE */
 }
 
-.fc-nonbusiness { /* default look for non-business-hours areas */
+.fc-nonbusiness,
+.fc-row .fc-content-skeleton .fc-vacation td,
+.fc-row .fc-content-skeleton .fc-holiday td{ /* default look for non-business-hours areas */
   /* will inherit .fc-bgevent's styles */
   background: #d7d7d7;
 }

@@ -10,88 +10,94 @@
         </div>
     </div>
 
+    <section>
     <h4>说明：</h4>
     <ul class="list-unordered">
         <li>请求：
             <ul class="list-unordered">
-                <li>次数： 1次</li>
-                <li>方式： GET</li>
-                <li>时间： 组件初始化</li>
+                <li>参数：
+                    <code>{"dataParams":"2016-04"}</code>
+                </li>
+                <li>方式： POST</li>
+                <li>时间： 组件初始化/切换日期</li>
             </ul>
         </li>
-        <li>配置：
+        <li>参数：
             <ul class="list-unordered">
-                <li>dataURL： 请求地址，string（字符串）类型，必填。</li>
-                <li>dataParams： 携带参数，object（对象）类型，可不填，默认为空。</li>
-                <li>testJSON： 测试使用，可忽略。</li>
+                <li>dataURL： 请求地址，string（字符串）类型。</li>
+                <li>dataParams： 携带参数，string（字符串）类型。</li>
+                <li>样例：
+                <pre><code>
+                    var settings = {
+                      dataURL: 'db/calendar/calendar.json',
+                      dataParams: '2016-04'
+                    };
+                    var calendar = new Calendar(settings);
+                </code></pre>
+                </li>
             </ul>
         </li>
         <li>数据：
             <ul class="list-unordered">
                 <li>格式： JSON</li>
-                <li>样例：
-                   <pre> <code>
-                       {
-                        events: [
-                        {"title":"总办","start":"2016-04-01"},{"title":"休息","start":"2016-04-02"
-                        },{"title":"休息","start":"2016-04-03"},{"title":"总办","start":"2016-04-04"
-                        },{"title":"总办","start":"2016-04-05"},{"title":"总办","start":"2016-04-06"
-                        },{"title":"总办","start":"2016-04-07"},{"title":"总办","start":"2016-04-08"
-                        },{"title":"休息","start":"2016-04-09"},{"title":"休息","start":"2016-04-10"
-                        },{"title":"总办","start":"2016-04-11"},{"title":"总办","start":"2016-04-12"
-                        },{"title":"总办","start":"2016-04-13"},{"title":"总办","start":"2016-04-14"
-                        },{"title":"总办","start":"2016-04-15"},{"title":"休息","start":"2016-04-16"
-                        },{"title":"休息","start":"2016-04-17"},{"title":"总办","start":"2016-04-18"
-                        },{"title":"总办","start":"2016-04-19"},{"title":"总办","start":"2016-04-20"
-                        },{"title":"总办","start":"2016-04-21"},{"title":"总办","start":"2016-04-22"
-                        },{"title":"休息","start":"2016-04-23"},{"title":"休息","start":"2016-04-24"
-                        },{"title":"总办","start":"2016-04-25"},{"title":"总办","start":"2016-04-26"
-                        },{"title":"总办","start":"2016-04-27"},{"title":"总办","start":"2016-04-28"
-                        },{"title":"总办","start":"2016-04-29"},{"title":"休息","start":"2016-04-30"
-                        }]
-                        }
-                   </code></pre>
+                <li>样例 1：
+                     <pre><code>
+                         {
+                         "events": [],
+                         "vct_date": [],
+                         "defaultDate": "2016-03-01"
+                         }
+                     </code></pre>
+                </li>
+                <li>样例 2：
+                     <pre><code>
+                         {
+                         "events": [
+                             {
+                             "title": "总办",
+                             "color": "blue",
+                             "start": "2016-04-01"
+                             },
+                             {
+                             "title": "休息",
+                             "start": "2016-04-02"
+                             }
+                         ],
+                         "vct_date": [
+                             "2016-04-17",
+                             "2016-04-16"
+                         ],
+                         "vct_color": "#D8D8D8",
+                         "defaultDate": "2016-04-01"
+                         }
+                     </code></pre>
+                </li>
+                <li>样例 3：
+                     <pre><code>
+                         {
+                         "events": [],
+                         "vct_date": [
+                             "2016-04-17",
+                             "2016-04-16"
+                         ],
+                         "defaultDate": "2016-04-01"
+                         }
+                     </code></pre>
                 </li>
             </ul>
         </li>
-        <li>其他：
-            <ul class="list-unordered">
-                <li>关于返回数据：
-                    <ul class="list-unordered">
-                        <li>title： 显示字段</li>
-                        <li>start： 对应日期</li>
-                        <li>color： 更改字段背景色，可以填</li>
-                    </ul>
-            </ul>
-        </li>
-        <li>╮(╯▽╰)╭
-        </li>
+        <li>使用前提：页面中存在一个id="calendar"的元素。</li>
+        <li>使用方法：直接实例化即可。</li>
     </ul>
+    </section>
 </div>
 
 <script>
-    const testJson ={
-        events: [{"title":"总办","start":"2016-04-01"},{"title":"休息","start":"2016-04-02"
-        },{"title":"休息","start":"2016-04-03"},{"title":"总办","start":"2016-04-04"
-        },{"title":"总办","start":"2016-04-05"},{"title":"总办","start":"2016-04-06"
-        },{"title":"总办","start":"2016-04-07"},{"title":"总办","start":"2016-04-08"
-        },{"title":"休息","start":"2016-04-09"},{"title":"休息","start":"2016-04-10"
-        },{"title":"总办","start":"2016-04-11"},{"title":"总办","start":"2016-04-12"
-        },{"title":"总办","start":"2016-04-13"},{"title":"总办","start":"2016-04-14"
-        },{"title":"总办","start":"2016-04-15"},{"title":"休息","start":"2016-04-16"
-        },{"title":"休息","start":"2016-04-17"},{"title":"总办","start":"2016-04-18"
-        },{"title":"总办","start":"2016-04-19"},{"title":"总办","start":"2016-04-20"
-        },{"title":"总办","start":"2016-04-21"},{"title":"总办","start":"2016-04-22"
-        },{"title":"休息","start":"2016-04-23"},{"title":"休息","start":"2016-04-24"
-        },{"title":"总办","start":"2016-04-25"},{"title":"总办","start":"2016-04-26"
-        },{"title":"总办","start":"2016-04-27"},{"title":"总办","start":"2016-04-28"
-        },{"title":"总办","start":"2016-04-29"},{"title":"休息","start":"2016-04-30"
-        }]
+    const queryDate = new Date();
+    var settings = {
+        dataURL: 'db/calendar/calendar.json',
+        dataParams: queryDate.getFullYear() + "-" + (queryDate.getMonth()+1)
     };
 
-    var calendar = new Calendar({
-        dataURL: 'db/calendar/calendar.json',
-        dataParams: {},
-        testJSON: testJson
-    });
+    var calendar = new Calendar(settings);
 </script>

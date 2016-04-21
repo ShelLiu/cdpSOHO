@@ -1,33 +1,19 @@
 {
-  "events":  [{"title":"总办","color":"blue","start":"2016-04-01"},{"title":"休息","color":"blue","start":"2016-04-02"
-  },{"title":"休息","color":"blue","start":"2016-04-03"},{"title":"总办","color":"blue","start":"2016-04-04"
-  },{"title":"总办","color":"blue","start":"2016-04-05"},{"title":"总办","color":"blue","start":"2016-04-06"
-  },{"title":"总办","color":"blue","start":"2016-04-07"},{"title":"总办","color":"blue","start":"2016-04-08"
-  },{"title":"休息","color":"blue","start":"2016-04-09"},{"title":"休息","color":"blue","start":"2016-04-10"
-  },{"title":"总办","color":"blue","start":"2016-04-11"},{"title":"总办","color":"blue","start":"2016-04-12"
-  },{"title":"总办","color":"blue","start":"2016-04-13"},{"title":"总办","color":"blue","start":"2016-04-14"
-  },{"title":"总办","color":"blue","start":"2016-04-15"},{"title":"休息","color":"blue","start":"2016-04-16"
-  },{"title":"休息","color":"blue","start":"2016-04-17"},{"title":"总办","color":"blue","start":"2016-04-18"
-  },{"title":"总办","color":"blue","start":"2016-04-19"},{"title":"总办","color":"blue","start":"2016-04-20"
-  },{"title":"总办","color":"blue","start":"2016-04-21"},{"title":"总办","color":"blue","start":"2016-04-22"
-  },{"title":"休息","color":"blue","start":"2016-04-23"},{"title":"休息","color":"blue","start":"2016-04-24"
-  },{"title":"总办","color":"blue","start":"2016-04-25"},{"title":"总办","color":"blue","start":"2016-04-26"
-  },{"title":"总办","color":"blue","start":"2016-04-27"},{"title":"总办","color":"blue","start":"2016-04-28"
-  },{"title":"总办","color":"blue","start":"2016-04-29"},{"title":"休息","color":"blue","start":"2016-04-30"
-  },{"title":"总办","start":"2016-03-01"},{"title":"休息","start":"2016-03-02"
-  },{"title":"休息","start":"2016-03-03"},{"title":"总办","start":"2016-03-04"
-  },{"title":"总办","start":"2016-03-05"},{"title":"总办","start":"2016-03-06"
-  },{"title":"总办","start":"2016-03-07"},{"title":"总办","start":"2016-03-08"
-  },{"title":"休息","start":"2016-03-09"},{"title":"休息","start":"2016-03-10"
-  },{"title":"总办","start":"2016-03-11"},{"title":"总办","start":"2016-03-12"
-  },{"title":"总办","start":"2016-03-13"},{"title":"总办","start":"2016-03-14"
-  },{"title":"总办","start":"2016-03-15"},{"title":"休息","start":"2016-03-16"
-  },{"title":"休息","start":"2016-03-17"},{"title":"总办","start":"2016-03-18"
-  },{"title":"总办","start":"2016-03-19"},{"title":"总办","start":"2016-03-20"
-  },{"title":"总办","start":"2016-03-21"},{"title":"总办","start":"2016-03-22"
-  },{"title":"休息","start":"2016-03-23"},{"title":"休息","start":"2016-03-24"
-  },{"title":"总办","start":"2016-03-25"},{"title":"总办","start":"2016-03-26"
-  },{"title":"总办","start":"2016-03-27"},{"title":"总办","start":"2016-03-28"
-  },{"title":"总办","start":"2016-03-29"},{"title":"休息","start":"2016-03-30"
-  },{"title":"休息","start":"2016-03-31"}]
+  "events": [
+    {
+      "title": "总办",
+      "color": "blue",
+      "start": "2016-04-01"
+    },
+    {
+      "title": "休息",
+      "start": "2016-04-02"
+    }
+  ],
+  "vct_date": [
+    "2016-04-17",
+    "2016-04-16"
+  ],
+  "vct_color": "#D8D8D8",
+  "defaultDate": "2016-04-01"
 }
